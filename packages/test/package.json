@@ -1,9 +1,9 @@
 {
-  "name": "@null/test_",
+  "name": "test_useless",
   "version": "0.0.3-alpha.0",
   "main": "index.js",
   "license": "MIT",
-  "gitHead": "f5609b0ff8d755bc714251e0fe95ef019aae3d5f",
+  "gitHead": "8d622dbeee2c050afcbb11811de6eef81d06a9de",
   "publishConfig": {
     "access": "public"
   }
