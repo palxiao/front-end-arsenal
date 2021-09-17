@@ -1,72 +1,56 @@
-import { Config } from "./index";
-import fs from "fs-extra";
-import DocsRoute, { Route } from "./route";
-import path from "path";
-import { debug } from "./utils";
+import { Config } from './index'
+import fs from 'fs-extra'
+import DocsRoute, { Route } from './route'
+import path from 'path'
+import { debug } from './utils'
 
 function createDir(config: Config): void {
-  fs.ensureDirSync(config.cacheDir);
+  fs.ensureDirSync(config.cacheDir)
 }
 
 function createLayout(config: Config, route: DocsRoute): void {
-  const layoutDir = path.join(__dirname, "./template/layout.vue");
-  const oldDir = config.cacheDir + "/layout.vue";
+  const layoutDir = path.join(__dirname, './template/layout.vue')
+  const oldDir = config.cacheDir + '/layout.vue'
 
-  let oldData = "";
+  let oldData = ''
   if (fs.existsSync(oldDir)) {
-    oldData = fs.readFileSync(oldDir, "utf-8");
+    oldData = fs.readFileSync(oldDir, 'utf-8')
   }
 
-  const navs = route.toNavRouteData();
+  const navs = route.toNavRouteData()
   // 不使用模板引擎，直接使用标志的方式替换掉
   const layout = fs
-    .readFileSync(`${layoutDir}`, "utf-8")
-    .replace(
-      "// @vite-plugin-vue-docs layout header",
-      `header: ${JSON.stringify(config.header)},`
-    )
-    .replace(
-      "// @vite-plugin-vue-docs layout nav",
-      `navs: ${JSON.stringify(navs)},`
-    );
+    .readFileSync(`${layoutDir}`, 'utf-8')
+    .replace('// @vite-vue3-docs layout header', `header: ${JSON.stringify(config.header)},`)
+    .replace('// @vite-vue3-docs layout nav', `navs: ${JSON.stringify(navs)},`)
 
-  if (oldData === layout) return;
+  if (oldData === layout) return
 
-  fs.writeFileSync(oldDir, layout);
+  fs.writeFileSync(oldDir, layout)
 }
 
 function clean(config: Config): void {
-  fs.emptyDirSync(config.cacheDir);
+  fs.emptyDirSync(config.cacheDir)
 }
 
 function childFile(config: Config, route: Route): string {
-  const cacheDir = path.join(config.cacheDir, route.name + ".vue");
-  debug.cache("childFile %s", cacheDir);
+  const cacheDir = path.join(config.cacheDir, route.name + '.vue')
+  debug.cache('childFile %s', cacheDir)
 
-  const tmpContent = fs.readFileSync(
-    path.join(__dirname, "./template/content.vue"),
-    "utf-8"
-  );
+  const tmpContent = fs.readFileSync(path.join(__dirname, './template/content.vue'), 'utf-8')
 
-  let oldContent = "";
+  let oldContent = ''
   if (fs.existsSync(cacheDir)) {
-    oldContent = fs.readFileSync(cacheDir, "utf-8");
+    oldContent = fs.readFileSync(cacheDir, 'utf-8')
   }
 
-  let cacheData = tmpContent.replace(
-    `// @vite-plugin-vue-docs content result`,
-    `result: ${JSON.stringify(route.data)}`
-  );
+  let cacheData = tmpContent.replace(`// @vite-vue3-docs content result`, `result: ${JSON.stringify(route.data)}`)
 
   if (route.demo) {
-    const demo = route.demo;
-    const demoCode = demo.code
-      ?.replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/{/g, "&#123;")
-      .replace(/}/g, "&#125");
+    const demo = route.demo
+    const demoCode = demo.code?.replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/{/g, '&#123;').replace(/}/g, '&#125')
     cacheData = cacheData.replace(
-      `<!-- @vite-plugin-vue-docs content template demo -->`,
+      `<!-- @vite-vue3-docs content template demo -->`,
       `<div class="card">
       <h3>Demo</h3>
       <${demo.name} />
@@ -78,14 +62,14 @@ function childFile(config: Config, route: Route): string {
             </span>
         </p>
       </div>
-   </div>`
-    );
+   </div>`,
+    )
   }
 
-  if (oldContent === cacheData) return cacheDir;
+  if (oldContent === cacheData) return cacheDir
 
-  fs.writeFileSync(cacheDir, cacheData);
-  return cacheDir;
+  fs.writeFileSync(cacheDir, cacheData)
+  return cacheDir
 }
 
 const Cache = {
@@ -93,6 +77,6 @@ const Cache = {
   childFile,
   createDir,
   createLayout,
-};
+}
 
-export default Cache;
+export default Cache

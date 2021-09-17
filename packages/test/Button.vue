@@ -3,7 +3,7 @@
  * @Date: 2021-09-03 10:00:09
  * @Description: 
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-17 19:12:42
+ * @LastEditTime: 2021-09-17 19:32:45
  * @site: book.palxp.com / blog.palxp.com
 -->
 <template>
@@ -17,26 +17,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import type { PropType } from "vue";
+import { defineComponent } from 'vue'
 export default defineComponent({
-  name: "Button",
+  name: 'MButton',
   props: {
     // 参数
     title: {
       type: String,
-      default: "标题",
+      default: '标题',
     },
     // 新参数 1
     type: {
       type: [String, Array],
-      default: "默认",
+      default: '默认',
       required: true,
     },
     // 新参数 2
     type2: {
       type: [String, Array],
-      default: "默认",
+      default: '默认',
     },
     // 新参数 2
     type3: {
@@ -46,7 +45,7 @@ export default defineComponent({
   setup() {
     // console.log("组件加载成功!");
   },
-});
+})
 </script>
 <style lang="scss" scoped>
 .btn {

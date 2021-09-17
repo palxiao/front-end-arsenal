@@ -6,35 +6,31 @@
     "name": "ShawnPhang",
     "email": "shawnphang@163.com"
   },
-  "keywords": [
-    "javascript",
-    "typescript",
-    "vue3",
-    "vite"
-  ],
-  "licence": "MIT",
   "scripts": {
+    "build": "npm run vue-to-md && vite build",
     "backup-package-json": "node ./scripts/set-mode --mode=dev",
-    "reset-package-json": "node ./scripts/set-mode",
-    "link": "lerna link --force-local",
     "bs": "lerna bootstrap ",
-    "build:docs": "node ./scripts/build.docs",
     "build:cjs": "node ./scripts/build.cjs",
-    "build:es": "node ./scripts/build.es",
-    "build:umd": "node ./scripts/build.umd",
+    "build:docs": "node ./scripts/build.docs",
     "build:dts": "node ./scripts/build.dts",
+    "build:es": "node ./scripts/build.es",
+    "build:hash": "npm run vue-to-md && cross-env VITE_ROUTER_MODE=hash vite build",
     "build:pkg": "npm run build:shared && npm run build:cjs && npm run build:es &&  npm run build:umd && npm run build:dts",
     "build:pkg2": "npm run build:cjs && npm run build:es &&  npm run build:umd",
     "build:shared": "tsc packages/shared/index.ts --declaration --emitDeclarationOnly --outDir packages/shared/dist",
-    "vue-to-md": "node ./scripts/vue-to-md.js",
-    "dev": "npm run vue-to-md && vite",
-    "build": "npm run vue-to-md && vite build",
-    "example:hash": "npm run vue-to-md && cross-env VITE_ROUTER_MODE=hash vite",
-    "build:hash": "npm run vue-to-md && cross-env VITE_ROUTER_MODE=hash vite build",
-    "publish": "nrm use npm && lerna publish && nrm use taobao",
+    "build:umd": "node ./scripts/build.umd",
+    "c": "git add . && git-cz",
     "clean": "find . -name '*.DS_Store' -type f -delete && lerna clean && lerna run rm",
+    "clog": "conventional-changelog --config ./node_modules/vue-cli-plugin-norm/lib/log -i CHANGELOG.md -s -r 0 && commit-log",
+    "commit": "git add . && git-cz",
+    "dev": "npm run vue-to-md && vite",
+    "example:hash": "npm run vue-to-md && cross-env VITE_ROUTER_MODE=hash vite",
+    "link": "lerna link --force-local",
+    "publish": "nrm use npm && lerna publish && nrm use taobao",
+    "reload": "yarn remove vite-vue3-docs && yarn add /Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs -D && yarn dev",
+    "reset-package-json": "node ./scripts/set-mode",
     "version": "lerna version",
-    "reload": "yarn remove vite-vue3-docs && yarn add /Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs -D && yarn dev"
+    "vue-to-md": "node ./scripts/vue-to-md.js"
   },
   "dependencies": {
     "highlight.js": "^10.5.0",
@@ -51,18 +47,26 @@
     "@vitejs/plugin-vue": "^1.0.4",
     "@vue/compiler-core": "^3.2.11",
     "@vue/compiler-sfc": "^3.0.5",
+    "@vue/eslint-config-typescript": "^7.0.0",
     "@vuese/parser": "^2.10.3",
     "add": "^2.0.6",
+    "babel-eslint": "^10.1.0",
     "brotli": "^1.3.2",
+    "commitizen": "^4.0.3",
+    "commitlint": "^8.2.0",
+    "conventional-changelog-cli": "^2.0.28",
     "cross-env": "^7.0.3",
-    "eslint": "^7.17.0",
-    "eslint-plugin-vue": "^7.4.1",
+    "eslint": "^7.29.0",
+    "eslint-config-alloy": "^4.1.0",
+    "eslint-plugin-vue": "^7.12.1",
+    "husky": "^3.0.9",
     "inquirer": "^8.1.2",
     "lerna": "^3.22.1",
     "minimist": "^1.2.5",
     "node-sass": "^5.0.0",
     "postcss": "^8.2.4",
     "resize-observer-polyfill": "^1.5.1",
+    "right-pad": "^1.0.1",
     "rollup": "^2.36.1",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-postcss": "^4.0.0",
@@ -72,8 +76,27 @@
     "typescript": "^4.1.3",
     "vite": "^2.0.0-beta.65",
     "vite-vue3-docs": "/Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs",
+    "vue-cli-plugin-norm": "~1.2.12",
+    "vue-eslint-parser": "^7.6.0",
     "yarn": "^1.22.11"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/vue-cli-plugin-norm/lib/cz"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "keywords": [
+    "javascript",
+    "typescript",
+    "vue3",
+    "vite"
+  ],
+  "licence": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/palxiao/front-end-arsenal"

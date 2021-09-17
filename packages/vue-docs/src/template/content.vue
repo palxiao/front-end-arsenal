@@ -2,7 +2,7 @@
   <section>
     <h1>{{ result.name }}</h1>
 
-    <!-- @vite-plugin-vue-docs content template demo -->
+    <!-- @vite-vue3-docs content template demo -->
 
     <template v-for="type in types" :key="type">
       <div class="card" v-if="result[type]">
@@ -10,10 +10,7 @@
         <table>
           <thead>
             <tr>
-              <th
-                v-for="(item, index) in result[type].table.headers"
-                :key="index"
-              >
+              <th v-for="(item, index) in result[type].table.headers" :key="index">
                 {{ item }}
               </th>
             </tr>
@@ -39,11 +36,11 @@
 export default {
   data() {
     return {
-      types: ["props", "emits", "slots", "methods"],
+      types: ['props', 'emits', 'slots', 'methods'],
       showDemo: false,
       showSourceCode: false,
-      // @vite-plugin-vue-docs content result
-    };
+      // @vite-vue3-docs content result
+    }
   },
-};
+}
 </script>
