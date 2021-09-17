@@ -1,3 +1,11 @@
+<!--
+ * @Author: ShawnPhang
+ * @Date: 2021-09-02 15:36:56
+ * @Description: 
+ * @LastEditors: ShawnPhang
+ * @LastEditTime: 2021-09-12 17:46:31
+ * @site: book.palxp.com / blog.palxp.com
+-->
 <template>
   <div id="Readme">
     <readme-frame :readme="readme"></readme-frame>
@@ -18,11 +26,7 @@ export default defineComponent({
     const name = (route.name as string).replace('-readme', '');
     const readme = ref('');
     onMounted(async () => {
-      console.log(123123213);
-      
       const readmeText = await import(`../../packages/${name}/README.md`);
-      console.log('????', readmeText);
-      
       readme.value = readmeText.default;
     });
     return {

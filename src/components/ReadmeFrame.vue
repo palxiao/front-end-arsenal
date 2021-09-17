@@ -1,38 +1,39 @@
 <template>
   <div id="API">
     <div class="container">
-      <div
-        class="readme"
-        v-html="transformReadme"
-      >
-      </div>
+      <div class="readme" v-html="transformReadme"></div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from 'vue';
+import { computed, defineComponent } from "vue";
 export default defineComponent({
-  name: 'ReadmeFrame',
+  name: "ReadmeFrame",
   props: {
     readme: {
       type: String,
-      default: ''
-    }
+      default: "",
+    },
   },
   setup(props) {
-    const transformReadme = computed(() => props.readme.replace(/<table>(.|\n)*?<\/table>/g, '<div class="table-wrapper">$&</div>'));
+    const transformReadme = computed(() =>
+      props.readme.replace(
+        /<table>(.|\n)*?<\/table>/g,
+        '<div class="table-wrapper">$&</div>'
+      )
+    );
     return {
-      transformReadme
+      transformReadme,
     };
-  }
+  },
 });
 </script>
 <style lang="scss" scoped>
 #API {
   width: 100%;
-  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
-    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 .container {
   max-width: 800px;
@@ -79,7 +80,7 @@ export default defineComponent({
     line-height: 1.1;
     padding-top: 16px;
     margin-bottom: 8px;
-    font-family: 'Kaushan Script', cursive;
+    font-family: "Kaushan Script", cursive;
   }
   h2,
   h3,
@@ -166,7 +167,7 @@ export default defineComponent({
     color: #888;
   }
   blockquote:before {
-    content: '“';
+    content: "“";
     left: 8px;
     top: 0;
     color: #e0e0e0;
@@ -177,7 +178,7 @@ export default defineComponent({
     position: absolute;
   }
   blockquote:after {
-    content: '”';
+    content: "”";
     right: 8px;
     color: #e0e0e0;
     font-size: 3em;
@@ -264,7 +265,7 @@ export default defineComponent({
     list-style-type: none;
   }
   ol#footnotes li:before {
-    content: counter(footer-counter) '. ';
+    content: counter(footer-counter) ". ";
     counter-increment: footer-counter;
     font-weight: 800;
     font-size: 0.95em;

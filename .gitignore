@@ -8,3 +8,5 @@ lerna-debug.log
 
 package-lock.json
 yarn-error.log
+
+.cache-vue-docs

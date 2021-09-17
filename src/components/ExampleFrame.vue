@@ -84,13 +84,6 @@
       </div>
       <div class="copyright">
         <img
-          src="/images/Home.svg"
-          class="home-img"
-          alt="Home"
-          title="Home"
-          @click="$router.push('/')"
-        >
-        <img
           src="/images/github.svg"
           class="github-img"
           alt="Github"
@@ -98,11 +91,11 @@
           @click="turnToGithub"
         >
         <a
-          href="http://kongfandong.cn/blog/about"
+          href=""
           target="_blank"
           title="About Author"
           class="link"
-        >LEON.KFD</a>
+        >Front-end Arsenal</a>
         <span class="text">&copy; 2021 </span>
       </div>
     </div>
@@ -175,7 +168,7 @@
 <script lang="ts">
 import { computed, defineComponent, ref, reactive, PropType, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
-import { ResizeEvent, ResizeDirective } from '../../packages/resize';
+import { ResizeEvent, ResizeDirective } from '@/utils/plugins/resize';
 interface Example {
   name: string,
   introduce: string
@@ -274,7 +267,7 @@ export default defineComponent({
       handleNavClick,
       handleResize,
       turnToGithub () {
-        window.open('');
+        window.open('https://github.com/palxiao/front-end-arsenal');
       }
     };
   }
@@ -639,5 +632,9 @@ export default defineComponent({
   .readme {
     font-size: 13px;
   }
+}
+iframe {
+  width: 100%;
+  min-height: 100vh;
 }
 </style>

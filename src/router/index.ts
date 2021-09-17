@@ -3,14 +3,16 @@
  * @Date: 2021-09-02 15:36:56
  * @Description: 
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-11 16:12:57
+ * @LastEditTime: 2021-09-17 15:24:17
  * @site: book.palxp.com / blog.palxp.com
  */
+import { routes } from "virtual:vite-plugin-vue-docs";
 
 import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router';
 const isHashRouterMode = import.meta.env.VITE_ROUTER_MODE === 'hash';
 const packageMain = import.meta.glob('../pages/*/index.vue');
 const exampleMain = import.meta.glob('../pages/*/example/*.vue');
+
 const packageMainMap: Record<string, any> = {};
 Object.keys(packageMain).map(key => {
   const reg = /^.*pages\/(.*)\/index.*$/;
@@ -47,7 +49,8 @@ const router = createRouter({
           })
         ]
       };
-    })
+    }),
+    ...routes
   ]
 });
 

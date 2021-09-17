@@ -3,14 +3,14 @@
  * @Date: 2021-09-02 15:36:56
  * @Description:
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-11 16:06:02
+ * @LastEditTime: 2021-09-13 17:07:01
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
 const chalk = require('chalk')
 const { build, walkPackageDirs } = require('./build')
 
-const libName = 'lib'
+const libName = 'dist'
 const entryName = '' // 按需打包时可选的前缀名 - 
 
 console.log(chalk.blue('正在生成es模块!'))

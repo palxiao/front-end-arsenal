@@ -1,50 +1,52 @@
 /*
  * @Author: ShawnPhang
  * @Date: 2021-09-02 15:36:56
- * @Description: 
+ * @Description:
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-11 16:07:35
+ * @LastEditTime: 2021-09-17 11:12:25
  * @site: book.palxp.com / blog.palxp.com
  */
-import vue from '@vitejs/plugin-vue';
-import marked from 'marked';
-import hljs from 'highlight.js';
-import path from 'path';
+import vue from '@vitejs/plugin-vue'
+import marked from 'marked'
+import hljs from 'highlight.js'
+import path from 'path'
+import vueDocs from 'vite-plugin-vue-docs'
 // import analyze from 'rollup-plugin-analyzer';
 
-const isHashRouterMode = process.env.VITE_ROUTER_MODE === 'hash';
-const basePath = isHashRouterMode ? './' : '/';
+const isHashRouterMode = process.env.VITE_ROUTER_MODE === 'hash'
+const basePath = isHashRouterMode ? './' : '/'
 const markdownPlugin = (options: any) => {
   return {
     name: 'markdown',
     transform(code: string, id: string) {
       if (!/\.md/.test(id)) {
-        return;
+        return
       }
-      const result = marked(code, options);
-      return `export default ${JSON.stringify(result)}`;
-    }
-  };
-};
+      const result = marked(code, options)
+      return `export default ${JSON.stringify(result)}`
+    },
+  }
+}
 
 export default {
   base: basePath,
   resolve: {
     alias: {
       '@pkg': path.resolve(__dirname, 'packages'),
-      '@': path.resolve(__dirname, 'src')
-    }
+      '@': path.resolve(__dirname, 'src'),
+      vue: 'vue/dist/vue.esm-bundler.js',
+    },
   },
   plugins: [
-    vue(), 
+    vue(),
     markdownPlugin({
       highlight: (code: string) => {
         if (code.includes('template')) {
-          return hljs.highlight('html', code).value;
+          return hljs.highlight('html', code).value
         } else if (code.includes('lang="ts"')) {
-          return hljs.highlight('typescript', code).value;
+          return hljs.highlight('typescript', code).value
         } else {
-          return hljs.highlightAuto(code).value;
+          return hljs.highlightAuto(code).value
         }
       },
       // highlight: (code) => hljs.highlightAuto(code).value,
@@ -55,17 +57,18 @@ export default {
       sanitize: false,
       smartLists: true,
       smartypants: false,
-      xhtml: false
-    })
+      xhtml: false,
+    }),
+    vueDocs(),
   ],
   server: {
     proxy: {
       '/api': {
-        target: 'http://kongfandong.cn',
+        target: 'http://localhost',
         changeOrigin: true,
-        rewrite: (path: string) => path.replace(/^\/api/, '')
-      }
-    }
+        rewrite: (path: string) => path.replace(/^\/api/, ''),
+      },
+    },
   },
   // build: {
   //   rollupOptions: {
@@ -75,4 +78,4 @@ export default {
   //     })],
   //   },
   // },
-};
+}
