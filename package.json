@@ -1,6 +1,6 @@
 {
   "name": "front-end-arsenal",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Front end components library, Integrated development testing documentation",
   "author": {
     "name": "ShawnPhang",
@@ -16,21 +16,25 @@
   "scripts": {
     "backup-package-json": "node ./scripts/set-mode --mode=dev",
     "reset-package-json": "node ./scripts/set-mode",
-    "bs": "lerna bootstrap",
+    "link": "lerna link --force-local",
+    "bs": "lerna bootstrap ",
+    "build:docs": "node ./scripts/build.docs",
     "build:cjs": "node ./scripts/build.cjs",
     "build:es": "node ./scripts/build.es",
     "build:umd": "node ./scripts/build.umd",
     "build:dts": "node ./scripts/build.dts",
     "build:pkg": "npm run build:shared && npm run build:cjs && npm run build:es &&  npm run build:umd && npm run build:dts",
+    "build:pkg2": "npm run build:cjs && npm run build:es &&  npm run build:umd",
     "build:shared": "tsc packages/shared/index.ts --declaration --emitDeclarationOnly --outDir packages/shared/dist",
     "vue-to-md": "node ./scripts/vue-to-md.js",
     "dev": "npm run vue-to-md && vite",
     "build": "npm run vue-to-md && vite build",
     "example:hash": "npm run vue-to-md && cross-env VITE_ROUTER_MODE=hash vite",
     "build:hash": "npm run vue-to-md && cross-env VITE_ROUTER_MODE=hash vite build",
-    "publish": "lerna publish",
-    "clean": "lerna clean && lerna run rm",
-    "v": "lerna version"
+    "publish": "nrm use npm && lerna publish && nrm use taobao",
+    "clean": "find . -name '*.DS_Store' -type f -delete && lerna clean && lerna run rm",
+    "version": "lerna version",
+    "reload": "yarn remove vite-plugin-vue-docs && yarn add /Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs -D && yarn dev"
   },
   "dependencies": {
     "highlight.js": "^10.5.0",
@@ -45,7 +49,10 @@
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
     "@vitejs/plugin-vue": "^1.0.4",
+    "@vue/compiler-core": "^3.2.11",
     "@vue/compiler-sfc": "^3.0.5",
+    "@vuese/parser": "^2.10.3",
+    "add": "^2.0.6",
     "brotli": "^1.3.2",
     "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
@@ -63,7 +70,9 @@
     "rollup-plugin-vue": "^6.0.0",
     "sass": "^1.32.2",
     "typescript": "^4.1.3",
-    "vite": "^2.0.0-beta.65"
+    "vite": "^2.0.0-beta.65",
+    "vite-plugin-vue-docs": "/Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs",
+    "yarn": "^1.22.11"
   },
   "repository": {
     "type": "git",
