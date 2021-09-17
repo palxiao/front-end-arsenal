@@ -3,14 +3,14 @@
  * @Date: 2021-09-02 15:36:56
  * @Description:
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-17 11:12:25
+ * @LastEditTime: 2021-09-17 19:15:10
  * @site: book.palxp.com / blog.palxp.com
  */
 import vue from '@vitejs/plugin-vue'
 import marked from 'marked'
 import hljs from 'highlight.js'
 import path from 'path'
-import vueDocs from 'vite-plugin-vue-docs'
+import vueDocs from 'vite-vue3-docs'
 // import analyze from 'rollup-plugin-analyzer';
 
 const isHashRouterMode = process.env.VITE_ROUTER_MODE === 'hash'

@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-17 16:20:14
+ * @LastEditTime: 2021-09-17 19:11:50
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -13,7 +13,7 @@
 2. [x] 指定打包
 2. [ ] 对 d.ts 声明文件进行打包
 2. [x] 提交组件的测试，lerna
-3. [ ] 文档的自动生成
+3. [x] 文档的自动生成
 
 ## 文档
 ### API
