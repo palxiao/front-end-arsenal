@@ -3,7 +3,7 @@
  * @Date: 2021-09-03 10:00:09
  * @Description: 
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-17 19:32:45
+ * @LastEditTime: 2021-09-22 15:18:57
  * @site: book.palxp.com / blog.palxp.com
 -->
 <template>
@@ -42,9 +42,7 @@ export default defineComponent({
       type: [String, Array],
     },
   },
-  setup() {
-    // console.log("组件加载成功!");
-  },
+  setup() {},
 })
 </script>
 <style lang="scss" scoped>

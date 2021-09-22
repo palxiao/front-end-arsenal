@@ -6,3 +6,11 @@ Button.install = (app: App): void => {
 }
 
 export default Button
+
+// const requireCxt = require.context("./src", true, /.vue/)
+// const components = {}
+
+// requireCxt.keys().map((item, index) => {
+//   const component = requireCxt(item)
+//   return (components[component.default.name] = component.default)
+// }, {})

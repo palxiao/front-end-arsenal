@@ -1,9 +1,9 @@
 /*
  * @Author: ShawnPhang
  * @Date: 2021-09-02 15:36:56
- * @Description: 
+ * @Description:
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-11 11:29:23
+ * @LastEditTime: 2021-09-22 17:36:28
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
@@ -15,12 +15,16 @@ const vuePlugin = require('rollup-plugin-vue')
 const postcss = require('rollup-plugin-postcss')
 const { gzipSync } = require('zlib')
 const { compress } = require('brotli')
+const resolve = require('rollup-plugin-node-resolve')
+const requireContext = require('rollup-plugin-require-context')
 
 module.exports = {
-  build: async function ({ input, output, terser, external } = {}) {
+  build: async function ({ input, output, terser, external = [] } = {}) {
     const bundle = await rollup.rollup({
       input,
       plugins: [
+        requireContext(),
+        resolve(),
         vuePlugin({
           include: /\.vue$/,
           preprocessStyles: true,
@@ -31,7 +35,7 @@ module.exports = {
         postcss(),
         terser,
       ],
-      external,
+      external: [...external, 'vue'], // 必须指定vue为外部变量否则会把vue的引用打包进去
     })
     await bundle.write(output)
     const { file } = output
