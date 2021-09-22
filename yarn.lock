@@ -4775,10 +4775,10 @@ inquirer@6.5.2, inquirer@^6.2.0:
     strip-ansi "^5.1.0"
     through "^2.3.6"
 
-inquirer@^8.1.2:
-  version "8.1.2"
-  resolved "https://registry.nlark.com/inquirer/download/inquirer-8.1.2.tgz#65b204d2cd7fb63400edd925dfe428bafd422e3d"
-  integrity sha1-ZbIE0s1/tjQA7dkl3+Qouv1CLj0=
+inquirer@^8.1.5:
+  version "8.1.5"
+  resolved "https://registry.nlark.com/inquirer/download/inquirer-8.1.5.tgz?cache=0&sync_timestamp=1631753592305&other_urls=https%3A%2F%2Fregistry.nlark.com%2Finquirer%2Fdownload%2Finquirer-8.1.5.tgz#2dc5159203c826d654915b5fe6990fd17f54a150"
+  integrity sha1-LcUVkgPIJtZUkVtf5pkP0X9UoVA=
   dependencies:
     ansi-escapes "^4.2.1"
     chalk "^4.1.1"
@@ -4788,7 +4788,7 @@ inquirer@^8.1.2:
     figures "^3.0.0"
     lodash "^4.17.21"
     mute-stream "0.0.8"
-    ora "^5.3.0"
+    ora "^5.4.1"
     run-async "^2.4.0"
     rxjs "^7.2.0"
     string-width "^4.1.0"
@@ -6300,9 +6300,9 @@ optionator@^0.9.1:
     type-check "^0.4.0"
     word-wrap "^1.2.3"
 
-ora@^5.3.0:
+ora@^5.4.1:
   version "5.4.1"
-  resolved "https://registry.nlark.com/ora/download/ora-5.4.1.tgz?cache=0&sync_timestamp=1629755504079&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fora%2Fdownload%2Fora-5.4.1.tgz#1b2678426af4ac4a509008e5e4ac9e9959db9e18"
+  resolved "https://registry.nlark.com/ora/download/ora-5.4.1.tgz?cache=0&sync_timestamp=1631556430183&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fora%2Fdownload%2Fora-5.4.1.tgz#1b2678426af4ac4a509008e5e4ac9e9959db9e18"
   integrity sha1-GyZ4Qmr0rEpQkAjl5KyemVnbnhg=
   dependencies:
     bl "^4.1.0"

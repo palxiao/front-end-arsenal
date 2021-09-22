@@ -1,13 +1,14 @@
 /*
  * @Author: ShawnPhang
  * @Date: 2021-09-02 15:36:56
- * @Description:
+ * @Description: 待优化
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-22 20:21:21
+ * @LastEditTime: 2021-09-22 20:21:29
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
 const chalk = require('chalk')
+const { terser } = require('rollup-plugin-terser')
 const { build, walkPackageDirs } = require('./build')
 
 const libName = 'dist'
@@ -22,6 +23,7 @@ walkPackageDirs((dirName) => {
       file: `./packages/${dirName}/${libName}/index.es.js`,
       format: 'esm',
     },
+    terser: terser(),
   }
   const dirNames = fs.readdirSync(`packages/${dirName}`)
   // 如果存在src则使用分包打包

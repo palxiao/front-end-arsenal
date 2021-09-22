@@ -13,10 +13,10 @@
     "build:cjs": "node ./scripts/build.cjs",
     "build:docs": "node ./scripts/build.docs",
     "build:dts": "node ./scripts/build.dts",
-    "build:es": "lerna run build && node ./scripts/build.es",
+    "build:es": "node ./scripts/build.es",
+    "build:es-mini": "node ./scripts/build.es.mini",
     "build:hash": "npm run vue-to-md && cross-env VITE_ROUTER_MODE=hash vite build",
     "build:pkg2": "npm run build:shared && npm run build:cjs && npm run build:es &&  npm run build:umd && npm run build:dts",
-    "build:pkg": "npm run build:es",
     "build:shared": "tsc packages/shared/index.ts --declaration --emitDeclarationOnly --outDir packages/shared/dist",
     "build:umd": "node ./scripts/build.umd",
     "lerna-build": "lerna run build",
@@ -31,7 +31,8 @@
     "reload": "yarn remove vite-vue3-docs && yarn add /Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs -D && yarn dev",
     "reset-package-json": "node ./scripts/set-mode",
     "version": "lerna version",
-    "vue-to-md": "node ./scripts/vue-to-md.js"
+    "vue-to-md": "node ./scripts/vue-to-md.js",
+    "build:pkg": "node ./scripts/select-build.js"
   },
   "dependencies": {
     "highlight.js": "^10.5.0",
@@ -63,7 +64,7 @@
     "eslint-plugin-vue": "^7.12.1",
     "generate-source-map": "0.0.5",
     "husky": "^3.0.9",
-    "inquirer": "^8.1.2",
+    "inquirer": "^8.1.5",
     "lerna": "^3.22.1",
     "minimist": "^1.2.5",
     "node-sass": "^5.0.0",

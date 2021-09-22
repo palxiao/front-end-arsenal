@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 15:36:56
  * @Description:
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-22 17:36:28
+ * @LastEditTime: 2021-09-22 20:13:53
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
@@ -53,11 +53,14 @@ module.exports = {
     }
   },
   walkPackageDirs: function (callback) {
-    const targetDir = process.argv[process.argv.length - 1] // 假如输入了目标
+    const processArr = [...process.argv]
+    const targetDirs = processArr.splice(2) // 这个只适配了yarn，npm run 是 3
+    // const targetDir = process.argv[process.argv.length - 1] // 假如输入了目标
     const dirNames = fs.readdirSync('packages')
-
-    if (dirNames.includes(targetDir)) {
-      callback(targetDir)
+    if (targetDirs && targetDirs.length > 0) {
+      targetDirs.forEach((targetDir) => {
+        dirNames.includes(targetDir) && callback(targetDir)
+      })
     } else {
       const whiteList = ['shared']
       dirNames.forEach((dirName) => {

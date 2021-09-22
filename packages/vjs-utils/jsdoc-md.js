@@ -3,7 +3,7 @@
  * @Date: 2021-09-22 18:24:11
  * @Description: 生成MD文件
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-22 18:37:20
+ * @LastEditTime: 2021-09-22 20:16:22
  * @site: book.palxp.com / blog.palxp.com
  */
 console.log('---- Start -----')
@@ -19,6 +19,10 @@ jsdoc2md
     // template: fs.readFileSync('./scripts/api.handlebars', 'utf8'),
   })
   .then((text) => {
-    console.log('---- 生成文档完毕 ----')
-    fs.outputFile(path.resolve(process.cwd(), './README.md'), text)
+    if (text) {
+      console.log('---- 生成文档完毕 ----')
+      fs.outputFile(path.resolve(process.cwd(), './README.md'), text)
+    } else {
+      console.warn('---- 没有生成文档 ----')
+    }
   })
