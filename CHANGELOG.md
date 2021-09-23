@@ -1,9 +1,11 @@
-## [0.0.2](https://github.com/palxiao/front-end-arsenal/compare/v0.0.1...v0.0.2) (2021-09-17)
+## [0.0.2](https://github.com/palxiao/front-end-arsenal/compare/v0.0.1...v0.0.2) (2021-09-22)
 
 ### 🌟 新功能
 范围|描述|commitId
 --|--|--
  升级 | 添加代码美化及校验等 | [817b90a](https://github.com/palxiao/front-end-arsenal/commit/817b90a)
+ package | 新增工具函数包 | [6d764d4](https://github.com/palxiao/front-end-arsenal/commit/6d764d4)
+ script | 添加编译选择器 | [49f66a0](https://github.com/palxiao/front-end-arsenal/commit/49f66a0)
  none | update | [7844d14](https://github.com/palxiao/front-end-arsenal/commit/7844d14)
  none | version change | [bc2a86f](https://github.com/palxiao/front-end-arsenal/commit/bc2a86f)
 

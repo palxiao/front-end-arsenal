@@ -1,15 +1,7 @@
 <template>
   <div id="example">
-    <input
-      id="navBtnActive"
-      v-model="navActive"
-      type="checkbox"
-      style="display:none"
-    >
-    <label
-      class="nav-btn"
-      for="navBtnActive"
-    >
+    <input id="navBtnActive" v-model="navActive" type="checkbox" style="display: none" />
+    <label class="nav-btn" for="navBtnActive">
       <div class="line" />
       <div class="line" />
       <div class="line" />
@@ -19,21 +11,11 @@
         {{ activeTitle }}
       </p>
     </div>
-    <div
-      class="nav-mask"
-      :class="{active: navActive}"
-      @click.self="navActive = false"
-    />
-    <div
-      class="nav"
-      :class="{active: navActive}"
-    >
+    <div class="nav-mask" :class="{ active: navActive }" @click.self="navActive = false" />
+    <div class="nav" :class="{ active: navActive }">
       <div class="nav-content">
         <div class="logo">
-          <h1
-            id="main"
-            @click="$router.push('/')"
-          >
+          <h1 id="main" @click="$router.push('/')">
             <svg class="back" viewBox="0 0 1024 1024">
               <path d="M899.818723 555.092447 382.719588 555.092447c-23.796986 0-43.091424-19.294438-43.091424-43.091424 0-23.799032 19.294438-43.091424 43.091424-43.091424l517.099135 0c23.799032 0 43.091424 19.292392 43.091424 43.091424C942.910147 535.798009 923.617755 555.092447 899.818723 555.092447zM185.058786 512.001023l335.979054 335.979054c16.827247 16.827247 16.827247 44.110637 0 60.939931-16.827247 16.829294-44.110637 16.829294-60.939931 0L93.700055 542.522154c-8.428973-8.426927-12.623505-19.47761-12.611226-30.524201-0.013303-11.044544 4.182252-22.095227 12.611226-30.522154L460.096886 115.079992c16.829294-16.829294 44.112684-16.829294 60.939931 0 16.827247 16.827247 16.827247 44.112684 0 60.939931L185.058786 512.001023z"></path>
             </svg>
@@ -43,39 +25,19 @@
             {{ moduleName }}
           </p>
         </div>
-        <p class="nav-title">
-          Document
-        </p>
+        <p class="nav-title">Document</p>
         <ul class="nav-list">
-          <li
-            v-for="(item,index) in readmeList"
-            :key="index"
-            class="nav-listitem"
-            :class="{active: page === `${mainName}-readme`}"
-            @click="$router.push({name: `${mainName}-readme`})"
-          >
-            <p class="title">
-              #.{{ item.name }}
-            </p>
+          <li v-for="(item, index) in readmeList" :key="index" class="nav-listitem" :class="{ active: page === `${mainName}-readme` }" @click="$router.push({ name: `${mainName}-readme` })">
+            <p class="title">#.{{ item.name }}</p>
             <p class="introduce">
               {{ item.introduce }}
             </p>
           </li>
         </ul>
-        <p class="nav-title">
-          Example
-        </p>
+        <p class="nav-title">Example</p>
         <ul class="nav-list">
-          <li
-            v-for="(item,index) in exampleList"
-            :key="index"
-            class="nav-listitem"
-            :class="{active: page == `${mainName}-example${index+1}`}"
-            @click="handleNavClick(index)"
-          >
-            <p class="title">
-              {{ index + 1 }}.{{ item.name }}
-            </p>
+          <li v-for="(item, index) in exampleList" :key="index" class="nav-listitem" :class="{ active: page == `${mainName}-example${index + 1}` }" @click="handleNavClick(index)">
+            <p class="title">{{ index + 1 }}.{{ item.name }}</p>
             <p class="introduce">
               {{ item.introduce }}
             </p>
@@ -83,175 +45,170 @@
         </ul>
       </div>
       <div class="copyright">
-        <img
-          src="/images/github.svg"
-          class="github-img"
-          alt="Github"
-          title="Github"
-          @click="turnToGithub"
-        >
-        <a
-          href=""
-          target="_blank"
-          title="About Author"
-          class="link"
-        >Front-end Arsenal</a>
+        <img src="/images/github.svg" class="github-img" alt="Github" title="Github" @click="turnToGithub" />
+        <a href="" target="_blank" title="About Author" class="link">Front-end Arsenal</a>
         <span class="text">&copy; 2021 </span>
       </div>
     </div>
-    <div
-      v-if="page!==`${mainName}-readme`"
-      class="content"
-    >
+    <div v-if="page !== `${mainName}-readme`" class="content">
       <div class="content-nav">
         <div class="content-nav-box">
-          <div
-            class="content-nav-item"
-            :class="{active: contentActive === 1}"
-            @click="contentActive = 1"
-          >
-            Example
-          </div>
-          <div
-            class="content-nav-item"
-            :class="{active: contentActive === 2}"
-            @click="contentActive = 2"
-          >
-            Code
-          </div>
+          <div class="content-nav-item" :class="{ active: contentActive === 1 }" @click="contentActive = 1">Example</div>
+          <div class="content-nav-item" :class="{ active: contentActive === 2 }" @click="contentActive = 2">Code</div>
         </div>
       </div>
-      <div
-        ref="tableExample"
-        class="example"
-        :class="{active: contentActive === 1}"
-      >
-        <p class="title">
-          Example
-        </p>
-        <div
-          v-if="showMobileWarning"
-          class="mobile-warning"
-        >
-          <div class="mobile-warning-content">
-            插件功能不支持移动端，请使用PC端浏览
-          </div>
+      <div ref="tableExample" class="example" :class="{ active: contentActive === 1 }">
+        <p class="title">Example</p>
+        <div v-if="showMobileWarning" class="mobile-warning">
+          <div class="mobile-warning-content">插件功能不支持移动端，请使用PC端浏览</div>
         </div>
         <div class="example-content">
           <router-view />
         </div>
       </div>
-      <div
-        v-resize:left="resizeOptions"
-        class="code"
-        :class="{active: contentActive === 2}"
-        @resize="handleResize"
-      >
-        <p class="title">
-          Code
-        </p>
-        <div
-          class="code-box"
-          v-html="code"
-        />
+      <div v-resize:left="resizeOptions" class="code" :class="{ active: contentActive === 2 }" @resize="handleResize">
+        <p class="title">Code</p>
+        <div class="code-box" v-html="code" />
       </div>
     </div>
-    <div
-      v-if="page===`${mainName}-readme`"
-      class="readme-content"
-    >
+    <div v-if="page === `${mainName}-readme`" class="readme-content">
       <router-view />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref, reactive, PropType, watch } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import { ResizeEvent, ResizeDirective } from '@/utils/plugins/resize';
+import { computed, defineComponent, ref, reactive, PropType, watch, nextTick } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { ResizeEvent, ResizeDirective } from '@/utils/plugins/resize'
 interface Example {
-  name: string,
+  name: string
   introduce: string
 }
 export default defineComponent({
   name: 'ExampleFrame',
   directives: {
-    resize: ResizeDirective
+    resize: ResizeDirective,
   },
   props: {
     mainName: {
       type: String,
-      default: ''
+      default: '',
     },
     readmeList: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     exampleList: {
       type: Array as PropType<Example[]>,
-      default: () => []
+      default: () => [],
     },
     disabledMobile: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   setup(props) {
-    const route = useRoute();
-    const router = useRouter();
+    const route = useRoute()
+    const router = useRouter()
 
-    const tableExample = ref();
-    const page = ref('');
-    const code = ref('');
-    const codeLoading = ref(false);
+    const tableExample = ref()
+    const page = ref('')
+    const code = ref('')
+    const codeLoading = ref(false)
     const resizeOptions = reactive({
       zIndex: 9999,
-      tipLineColor: '#889'
-    });
-    const navActive = ref(false);
-    const contentActive = ref(1);
+      tipLineColor: '#889',
+    })
+    const navActive = ref(false)
+    const contentActive = ref(1)
     const activeTitle = computed(() => {
       if (page.value === `${props.mainName}-readme`) {
-        return '#.README';
+        return '#.README'
       } else {
-        let index = props.exampleList.findIndex((item, index) => page.value === `${props.mainName}-example${index + 1}`);
-        return index > -1 ? `${index + 1}.${props.exampleList[index].name}` : '';
+        let index = props.exampleList.findIndex((item, index) => page.value === `${props.mainName}-example${index + 1}`)
+        return index > -1 ? `${index + 1}.${props.exampleList[index].name}` : ''
       }
-    });
+    })
     const showMobileWarning = computed(() => {
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
-      return isMobile && props.disabledMobile;
-    });
-    const moduleName = computed(() => props.mainName.split('-').map(name => name.slice(0, 1).toUpperCase() + name.slice(1)).join(' '));
-    const handleNavClick = (index:number) => {
-      router.push({ name: `${props.mainName}-example${index + 1}` });
-    };
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)
+      return isMobile && props.disabledMobile
+    })
+    const moduleName = computed(() =>
+      props.mainName
+        .split('-')
+        .map((name) => name.slice(0, 1).toUpperCase() + name.slice(1))
+        .join(' '),
+    )
+    const handleNavClick = (index: number) => {
+      router.push({ name: `${props.mainName}-example${index + 1}` })
+    }
     const loadCode = async () => {
-      codeLoading.value = true;
-      let codeText = await import(`../code/${props.mainName}/${page.value.replace(props.mainName + '-', '')}.md`);
-      // code.value = codeText.default.replace(/\.\.\/\.\.\/\.\.\/\.\.\/packages/g, '');
-      code.value = codeText.default
-      codeLoading.value = false;
-    }; 
-    const handleResize = (e:ResizeEvent) => {
-      let el = e.target as HTMLElement;
-      if (el && e.resizeWidthPercent) {
-        el.style.width = `${e.resizeWidthPercent}%`;
-        tableExample.value.style.width = `${100 - e.resizeWidthPercent}%`;
-      }
-    };
-    watch(() => route.name, (val) => {
-      if (val && typeof val === 'string') {
-        page.value = val;
-        navActive.value = false;
-        contentActive.value = 1;
-        if (val.includes('example')) {
-          loadCode();
+      codeLoading.value = true
+      let codeText = await import(`../code/${props.mainName}/${page.value.replace(props.mainName + '-', '')}.md`)
+      // code.value = codeText.default.replace(/\.\.\/\.\.\/\.\.\/\.\.\/packages/g, '')
+      // TODO 代码高亮逻辑
+      code.value = codeText.default.replaceAll('\n', '\n</div><div>').replace('</div>', '') + '</div>'
+
+      const index = Number(page.value.replace(props.mainName + '-example', '')) - 1
+      const list: any = (props.exampleList[index] as any).highlight || []
+
+      nextTick(() => {
+        function isLight(val: number) {
+          let result: boolean = false
+          for (let i = 0; i < list.length; i++) {
+            const item = list[i]
+            if (result === true) {
+              break
+            }
+            if (typeof item === 'number') {
+              result = val === item
+            } else if (typeof item === 'object') {
+              result = interval(val, item[0], item[1])
+            }
+          }
+          return result
         }
+
+        function interval(val: number, min: number, max: number) {
+          if (val > min && val < max) {
+            return true
+          } else return false
+        }
+
+        const codeEL = document.getElementsByClassName('language-vue') as any
+        for (let i = 0; i < codeEL[0].childNodes.length; i++) {
+          const element = codeEL[0].childNodes[i]
+          if (!isLight(i)) {
+            element.style && (element.style.opacity = '.2')
+          }
+        }
+      })
+      codeLoading.value = false
+    }
+    const handleResize = (e: ResizeEvent) => {
+      let el = e.target as HTMLElement
+      if (el && e.resizeWidthPercent) {
+        el.style.width = `${e.resizeWidthPercent}%`
+        tableExample.value.style.width = `${100 - e.resizeWidthPercent}%`
       }
-    }, {
-      immediate: true
-    });
+    }
+    watch(
+      () => route.name,
+      (val) => {
+        if (val && typeof val === 'string') {
+          page.value = val
+          navActive.value = false
+          contentActive.value = 1
+          if (val.includes('example')) {
+            loadCode()
+          }
+        }
+      },
+      {
+        immediate: true,
+      },
+    )
 
     return {
       tableExample,
@@ -266,12 +223,12 @@ export default defineComponent({
       moduleName,
       handleNavClick,
       handleResize,
-      turnToGithub () {
-        window.open('https://github.com/palxiao/front-end-arsenal');
-      }
-    };
-  }
-});
+      turnToGithub() {
+        window.open('https://github.com/palxiao/front-end-arsenal')
+      },
+    }
+  },
+})
 </script>
 
 <style lang="scss" scoped>
@@ -284,7 +241,7 @@ export default defineComponent({
     padding-bottom: 10px;
     position: relative;
     cursor: pointer;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     &:after {
       content: '';
       position: absolute;
@@ -300,7 +257,7 @@ export default defineComponent({
       height: 18px;
       left: 0;
       top: calc(50% - 9px);
-      transition: all .4s ease-in-out;
+      transition: all 0.4s ease-in-out;
     }
     &:hover {
       padding-left: 20px;

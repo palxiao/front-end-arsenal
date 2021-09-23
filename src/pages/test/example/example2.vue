@@ -1,7 +1,7 @@
 <template>
   <div>
     <br /><br /><br /><br />
-    <mBtn> 测试文字slot </mBtn>
+    <mBtn> 测试文字slot222222 </mBtn>
     <br /><br /><br /><br />
   </div>
   <iframe src="/docs/test/-button?preview=true" frameborder="0"></iframe>
