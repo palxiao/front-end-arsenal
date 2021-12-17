@@ -1,0 +1,12 @@
+{
+  "name": "@zk/rate",
+  "version": "0.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  }
+}

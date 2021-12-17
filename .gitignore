@@ -1,12 +1,21 @@
-node_modules
 .DS_Store
-dist
-dist-ssr
-*.local
-src/code/*
-lerna-debug.log
+node_modules
+demo/node_modules
 
-package-lock.json
-yarn-error.log
+# local env files
+.env.local
+.env.*.local
 
-.cache-vue-docs
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -2,13 +2,5 @@
   "packages": [
     "packages/*"
   ],
-  "version": "independent",
-  "command": {
-    "bootstrap": {
-      "npmClientArgs": [
-        "--registry=https://registry.npm.taobao.org"
-      ],
-      "npmClient": "yarn"
-    }
-  }
+  "version": "0.0.1"
 }
