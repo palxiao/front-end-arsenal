@@ -176,11 +176,13 @@ export default defineComponent({
           } else return false
         }
 
-        const codeEL = document.getElementsByClassName('language-vue') as any
-        for (let i = 0; i < codeEL[0].childNodes.length; i++) {
-          const element = codeEL[0].childNodes[i]
-          if (!isLight(i)) {
-            element.style && (element.style.opacity = '.2')
+        if (list.length > 0) {
+          const codeEL = document.getElementsByClassName('language-vue') as any
+          for (let i = 0; i < codeEL[0].childNodes.length; i++) {
+            const element = codeEL[0].childNodes[i]
+            if (!isLight(i)) {
+              element.style && (element.style.opacity = '.2')
+            }
           }
         }
       })

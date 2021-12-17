@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-17 19:11:50
+ * @LastEditTime: 2021-09-26 15:37:38
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -11,18 +11,22 @@
 
 1. [x] 按需打包，独立打包
 2. [x] 指定打包
-2. [ ] 对 d.ts 声明文件进行打包
-2. [x] 提交组件的测试，lerna
-3. [x] 文档的自动生成
+3. [ ] 对 d.ts 声明文件进行打包
+4. [x] 提交组件的测试，lerna
+5. [x] 文档的自动生成
 
 ## 文档
+
 ### API
-  Name Attributes
-    参数名 说明文字 类型 可选值 
+
+Name Attributes
+参数名 说明文字 类型 可选值
+
 ### 技术方案
-  装饰器？复合函数？（排除，会增加副作用）
-  选择了不增加副作用的编译器插件方式，这里对应rollup
-  工具库将采用`typedoc`生成文档
+
+装饰器？复合函数？（排除，会增加副作用）
+选择了不增加副作用的编译器插件方式，这里对应 rollup
+工具库将采用`typedoc`生成文档
 
 ## 流程
 
@@ -36,7 +40,7 @@
 
 组件目录：packages/xxxx/
 
-组件打包文件夹：lib
+组件打包文件夹：dist
 组件打包 d.ts 文件夹：typings
 
 ## 基础

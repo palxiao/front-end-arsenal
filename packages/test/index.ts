@@ -1,3 +1,11 @@
+/*
+ * @Author: ShawnPhang
+ * @Date: 2021-09-03 09:59:57
+ * @Description:
+ * @LastEditors: ShawnPhang
+ * @LastEditTime: 2021-09-26 15:11:50
+ * @site: book.palxp.com / blog.palxp.com
+ */
 import { App } from 'vue'
 import Button from './Button.vue'
 
@@ -6,11 +14,3 @@ Button.install = (app: App): void => {
 }
 
 export default Button
-
-// const requireCxt = require.context("./src", true, /.vue/)
-// const components = {}
-
-// requireCxt.keys().map((item, index) => {
-//   const component = requireCxt(item)
-//   return (components[component.default.name] = component.default)
-// }, {})

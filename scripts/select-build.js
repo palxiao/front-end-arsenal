@@ -3,7 +3,7 @@
  * @Date: 2021-09-22 19:39:50
  * @Description: 打包选择器
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-22 20:35:03
+ * @LastEditTime: 2021-09-26 14:41:06
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
@@ -12,8 +12,10 @@ const exec = require('child_process').exec
 const inquirer = require('inquirer')
 
 let dirNames = fs.readdirSync('packages')
-dirNames = dirNames.map((name) => {
-  return { name }
+dirNames = dirNames.filter((name) => {
+  if (name !== 'vue-docs') {
+    return { name }
+  }
 })
 const option = [
   {
@@ -53,7 +55,7 @@ inquirer.prompt(option).then(async (answers) => {
     // console.log(stdout)
     // console.log(stderr)
     if (!error) {
-      process.succeed('打包完毕')
+      process.succeed('打包即将完成...')
     }
   })
 })

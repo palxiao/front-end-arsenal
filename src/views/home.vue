@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 15:36:56
  * @Description: 
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-11 16:08:39
+ * @LastEditTime: 2021-09-26 14:43:34
  * @site: book.palxp.com / blog.palxp.com
 -->
 <template>
@@ -13,22 +13,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import ReadmeFrame from '../components/ReadmeFrame.vue';
-import readme from '../../README.md';
+import { defineComponent } from 'vue'
+import ReadmeFrame from '../components/ReadmeFrame.vue'
+import readme from '../../README.md'
 // const isHashRouterMode = import.meta.env.VITE_ROUTER_MODE === 'hash';
 // const isProd = import.meta.env.PROD
 export default defineComponent({
   name: 'Home',
   components: {
-    ReadmeFrame
+    ReadmeFrame,
   },
   setup() {
     return {
-      readme
-    };
-  }
-});
+      readme,
+    }
+  },
+})
 </script>
-<style lang="scss" scoped>
-</style>

@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 15:36:56
  * @Description:
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-22 20:21:21
+ * @LastEditTime: 2021-09-23 19:37:22
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
@@ -39,8 +39,6 @@ walkPackageDirs((dirName) => {
     }
   }
 
-  if (dirName !== 'vue-docs') {
-    fs.mkdirSync(`./packages/${dirName}/${libName}`, { recursive: true })
-    build(option)
-  }
+  fs.mkdirSync(`./packages/${dirName}/${libName}`, { recursive: true })
+  build(option)
 })

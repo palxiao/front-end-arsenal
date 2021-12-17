@@ -3,7 +3,7 @@
  * @Date: 2021-09-03 10:11:49
  * @Description: 
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-23 19:23:24
+ * @LastEditTime: 2021-09-26 14:13:22
  * @site: book.palxp.com / blog.palxp.com
 -->
 <template>
@@ -33,6 +33,7 @@ export default defineComponent({
         {
           name: 'Self Open',
           introduce: '以自身作为打开元素',
+          highlight: [],
         },
         // {
         //   name: "Animation Mode",

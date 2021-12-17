@@ -19,7 +19,6 @@
     "build:pkg2": "npm run build:shared && npm run build:cjs && npm run build:es &&  npm run build:umd && npm run build:dts",
     "build:shared": "tsc packages/shared/index.ts --declaration --emitDeclarationOnly --outDir packages/shared/dist",
     "build:umd": "node ./scripts/build.umd",
-    "lerna-build": "lerna run build",
     "c": "git add . && git-cz",
     "clean": "find . -name '*.DS_Store' -type f -delete && lerna clean && lerna run rm",
     "clog": "conventional-changelog --config ./node_modules/vue-cli-plugin-norm/lib/log -i CHANGELOG.md -s -r 0 && commit-log",
@@ -32,7 +31,8 @@
     "reset-package-json": "node ./scripts/set-mode",
     "version": "lerna version",
     "vue-to-md": "node ./scripts/vue-to-md.js",
-    "build:pkg": "node ./scripts/select-build.js"
+    "build:pkg": "node ./scripts/select-build.js",
+    "test": "lerna create v-tailor"
   },
   "dependencies": {
     "highlight.js": "^10.5.0",
