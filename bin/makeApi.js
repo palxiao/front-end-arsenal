@@ -1,9 +1,9 @@
 /*
  * @Author: ShawnPhang
  * @Date: 2021-12-16 10:24:49
- * @Description: vue自动转api参数
+ * @Description: vue自动转api
  * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-12-17 09:22:55
+ * @LastEditTime: 2021-12-19 19:04:47
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
