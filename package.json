@@ -1,7 +1,6 @@
 {
   "name": "root",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "build": "cd ./bin && node buildAll.js",
     "add": "node ./bin/add.js",
