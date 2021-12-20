@@ -14,7 +14,8 @@
     "docs:build": "cd ./demo && npm run docs:build",
     "version": "lerna version",
     "bs": "lerna bootstrap",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "init": "lerna init"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
