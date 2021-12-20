@@ -1,5 +1,5 @@
 {
-    "name": "@zk/zk-button-test",
+    "name": "zk-button-test",
     "version": "0.0.7",
     "description": "",
     "main": "index.js",

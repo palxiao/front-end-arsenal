@@ -1,5 +1,5 @@
 {
-  "name": "@zk/rate",
+  "name": "zk-rate",
   "version": "0.0.7",
   "description": "",
   "main": "index.js",
