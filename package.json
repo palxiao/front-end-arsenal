@@ -12,9 +12,9 @@
     "commit": "git add . && git-cz",
     "dev": "cd ./demo && npm run docs:dev",
     "docs:build": "cd ./demo && npm run docs:build",
-    "version": "lerna version",
+    "version": "lerna version --conventional-commits",
     "bs": "lerna bootstrap",
-    "publish": "lerna publish",
+    "publish": "lerna publish --conventional-commits",
     "init": "lerna init"
   },
   "devDependencies": {
