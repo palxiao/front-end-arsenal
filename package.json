@@ -13,7 +13,7 @@
     "docs:build": "cd ./demo && npm run docs:build",
     "v": "lerna version",
     "bs": "lerna bootstrap",
-    "lp": "lerna publish",
+    "lp": "lerna publish --access public",
     "init": "lerna init"
   },
   "devDependencies": {
