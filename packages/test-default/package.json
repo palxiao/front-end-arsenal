@@ -1,6 +1,6 @@
 {
-    "name": "zk-button-test",
-    "version": "0.0.11",
+    "name": "@zaker/test-default",
+    "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {},

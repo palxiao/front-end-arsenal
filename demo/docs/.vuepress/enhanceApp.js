@@ -1,8 +1,6 @@
-import Rate from '@zk/rate';
-import ZkButtonTest from "@zk/zk-button-test";
+import TestDefault from "@zaker/test-default";
 export default function ({
   Vue
 }) {
-  Vue.use(Rate);
-  Vue.use(ZkButtonTest);
+  Vue.use(TestDefault);
 }

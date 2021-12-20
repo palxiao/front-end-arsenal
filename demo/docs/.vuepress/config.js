@@ -5,7 +5,7 @@ module.exports = {
   themeConfig: {
     nav: [{
       text: '组件',
-      link: '/rate/'
+      link: '/test-default/'
     }, {
       text: 'Github',
       link: ''
@@ -13,12 +13,12 @@ module.exports = {
     sidebar: [{
       title: '组件',
       collapsable: false,
-      children: ['/rate/', "/zk-button-test/"]
+      children: ["/test-default/"]
     }]
   },
   chainWebpack: config => {
     const pkgPath = path.resolve(__dirname, '../../../', 'packages');
     config.resolve.modules.add(pkgPath).add('node_modules');
-    config.resolve.alias.set('@zk', pkgPath);
+    config.resolve.alias.set('@zaker', pkgPath);
   }
 };

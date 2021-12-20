@@ -11,7 +11,7 @@ const traverse = require('@babel/traverse').default
 const generate = require('@babel/generator').default
 const t = require('@babel/types')
 
-const scope = '@zk/' // 包的作用域，如果你的包没有作用域，那么则不需要
+const scope = '@zaker/' // 包的作用域，如果你的包没有作用域，那么则不需要
 const templateDir = path.join(__dirname, 'template') // 模板路径
 
 const updateEnhanceApp = ({ name }) => {
