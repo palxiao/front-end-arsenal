@@ -12,7 +12,9 @@
     "commit": "git add . && git-cz",
     "dev": "cd ./demo && npm run docs:dev",
     "docs:build": "cd ./demo && npm run docs:build",
-    "version": "lerna version"
+    "version": "lerna version",
+    "bs": "lerna bootstrap",
+    "publish": "lerna publish"
   },
   "devDependencies": {
     "@babel/cli": "^7.13.10",
