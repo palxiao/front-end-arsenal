@@ -26,7 +26,7 @@
     "dev": "npm run vue-to-md && vite",
     "example:hash": "npm run vue-to-md && cross-env VITE_ROUTER_MODE=hash vite",
     "link": "lerna link --force-local",
-    "publish": "nrm use npm && lerna publish && nrm use taobao",
+    "publish": "lerna publish",
     "reload": "yarn remove vite-vue3-docs && yarn add /Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs -D && yarn dev",
     "reset-package-json": "node ./scripts/set-mode",
     "v": "lerna version",

@@ -15,10 +15,7 @@
     "access": "public",
     "registry": "https://registry.npm.taobao.org/"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/palxiao/front-end-arsenal.git"
-  },
+  "repository": "git+https://github.com/palxiao/front-end-arsenal.git",
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
