@@ -1,6 +1,6 @@
 {
   "name": "@palxp/xview",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ui components",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
