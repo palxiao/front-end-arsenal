@@ -7,5 +7,4 @@
 ```
 import ScrollWrap from '@palxp/scroll-wrap-vue3'
 
-// TODO:
 ```
