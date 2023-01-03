@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 15:36:56
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 11:00:36
+ * @LastEditTime: 2023-01-03 17:17:31
  */
 import vue from '@vitejs/plugin-vue'
 import marked from 'marked'
@@ -68,6 +68,9 @@ export default {
         rewrite: (path: string) => path.replace(/^\/api/, ''),
       },
     },
+  },
+  build: {
+    outDir: 'docs',
   },
   // build: {
   //   rollupOptions: {

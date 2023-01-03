@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 15:36:56
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 11:04:16
+ * @LastEditTime: 2023-01-03 17:12:24
  * @site: book.palxp.com / blog.palxp.com
  */
 import { routes } from 'virtual:vite-vue3-docs'
@@ -20,7 +20,8 @@ Object.keys(packageMain).map((key) => {
   packageMainMap[pkg] = packageMain[key]
 })
 const router = createRouter({
-  history: isHashRouterMode ? createWebHashHistory() : createWebHistory('/'),
+  // history: isHashRouterMode ? createWebHashHistory() : createWebHistory('/'),
+  history: createWebHashHistory(),
   routes: [
     {
       path: '/',
