@@ -5,7 +5,12 @@
 ## Usage
 
 ```
+yarn add @palxp/scroll-wrap-vue3
+
 import ScrollWrap from '@palxp/scroll-wrap-vue3'
 
-Test
 ```
+
+## API
+
+<iframe src="/#/docs/scroll-wrap/-scroll-wrap?preview=true" frameborder="0"></iframe>

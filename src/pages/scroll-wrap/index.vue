@@ -3,7 +3,7 @@
  * @Date: 2021-09-03 10:11:49
  * @Description: 
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 14:21:21
+ * @LastEditTime: 2023-01-03 17:46:14
  * @site: book.palxp.com / blog.palxp.com
 -->
 <template>
@@ -28,7 +28,7 @@ export default defineComponent({
         {
           name: '基础演示',
           introduce: '分段滚动页面',
-          highlight: [2, 4, 5, 7, 8, 10, 18],
+          highlight: [2, 4, 5, 7, 8, 10, 18, [20, 25]],
         },
       ],
     }

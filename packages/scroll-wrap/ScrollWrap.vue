@@ -3,7 +3,7 @@
  * @Date: 2022-12-18 22:40:14
  * @Description: 滚动组件
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 16:43:14
+ * @LastEditTime: 2023-01-03 17:43:38
 -->
 
 <template>
@@ -26,12 +26,17 @@ export default defineComponent({
     // 参数
     long: {
       type: [String, Number],
-      default: 0,
+      default: '0',
     },
     // 背景样式
     background: {
       type: String,
       default: '',
+    },
+    // 指定监听滚动元素
+    listen: {
+      type: HTMLDocument,
+      default: window,
     },
   },
   emits: ['done'],
@@ -51,7 +56,7 @@ export default defineComponent({
       startIndex.value = el.value.offsetTop
       endIndex.value = startIndex.value + parseInt(String(props.long), 10)
 
-      scrollListener(wrap.value, (distance: any) => {
+      scrollListener(props.listen, (distance: any) => {
         let process = 0
         if (distance > startIndex.value && distance <= endIndex.value) {
           process = (distance - startIndex.value) / (endIndex.value - startIndex.value)
