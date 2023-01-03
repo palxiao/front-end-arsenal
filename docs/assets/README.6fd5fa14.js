@@ -1,1 +1,0 @@
-var s='<h1 id="scroll-wrap-vue3"><code>scroll-wrap-vue3</code></h1>\n<blockquote>\n<p>TODO: 吸附滚动组件</p>\n</blockquote>\n<h2 id="usage">Usage</h2>\n<pre><code><span class="hljs-keyword">import</span> ScrollWrap <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@palxp/scroll-wrap-vue3&#x27;</span>\n\nTest\n</code></pre>\n';export{s as default};
