@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 15:36:56
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 17:17:31
+ * @LastEditTime: 2023-01-03 18:12:58
  */
 import vue from '@vitejs/plugin-vue'
 import marked from 'marked'
@@ -13,7 +13,8 @@ import vueDocs from 'vite-vue3-docs'
 // import analyze from 'rollup-plugin-analyzer';
 
 const isHashRouterMode = process.env.VITE_ROUTER_MODE === 'hash'
-const basePath = isHashRouterMode ? './' : '/'
+// const basePath = isHashRouterMode ? './' : '/'
+const basePath = './'
 const markdownPlugin = (options: any) => {
   return {
     name: 'markdown',
