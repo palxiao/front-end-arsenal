@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build-api": "node jsdoc-md.js",
-    "build": "npm run build-api"
+    "build": "cd ../../ && yarn build:es ijs-utils && cd packages/ijs-utils && npm run build-api"
   },
   "devDependencies": {
     "jsdoc-to-markdown": "^7.0.1"

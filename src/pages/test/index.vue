@@ -2,8 +2,8 @@
  * @Author: ShawnPhang
  * @Date: 2021-09-03 10:11:49
  * @Description: 
- * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-26 14:13:22
+ * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditTime: 2023-01-03 11:29:16
  * @site: book.palxp.com / blog.palxp.com
 -->
 <template>
@@ -32,17 +32,14 @@ export default defineComponent({
         },
         {
           name: 'Self Open',
-          introduce: '以自身作为打开元素',
+          introduce: 'sadsadassad',
           highlight: [],
         },
-        // {
-        //   name: "Animation Mode",
-        //   introduce: "Animate.css动画模式",
-        // },
-        // {
-        //   name: "Slot",
-        //   introduce: "插槽",
-        // },
+        {
+          name: 'Test 3',
+          introduce: 'abcdsasd',
+          highlight: [4, [14, 24], 11],
+        },
       ],
     }
   },

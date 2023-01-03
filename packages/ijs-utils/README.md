@@ -1,9 +1,6 @@
 ## Functions
 
 <dl>
-<dt><a href="#arrayDelRepetitive">`arrayDelRepetitive(arr1, ...arr2)`</a> ⇒ <code>Array</code></dt>
-<dd><p>数组去重</p>
-</dd>
 <dt><a href="#arrayEqual">`arrayEqual(arr1, arr2)`</a> ⇒ <code>Boolean</code></dt>
 <dd><p>判断两个数组是否相等</p>
 </dd>
@@ -38,10 +35,10 @@
 
 <a name="arrayDelRepetitive"></a>
 
-## `arrayDelRepetitive(arr1, ...arr2)` ⇒ <code>Array</code>
+## `arrayDelRepetitive` ⇒ <code>Array</code>
 数组去重
 
-**Kind**: global function  
+**Kind**: global Array - 数组类函数  
 **Returns**: <code>Array</code> - eg: arrayDelRepetitive([1,2],[2,5],[3,5,9])  //  [1, 2, 5, 3, 9]  
 
 | Param | Type | Description |

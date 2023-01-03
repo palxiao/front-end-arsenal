@@ -20,19 +20,19 @@
     "build:shared": "tsc packages/shared/index.ts --declaration --emitDeclarationOnly --outDir packages/shared/dist",
     "build:umd": "node ./scripts/build.umd",
     "c": "git add . && git-cz",
-    "clean": "find . -name '*.DS_Store' -type f -delete && lerna clean && lerna run rm",
     "clog": "conventional-changelog --config ./node_modules/vue-cli-plugin-norm/lib/log -i CHANGELOG.md -s -r 0 && commit-log",
     "commit": "git add . && git-cz",
+    "clean": "find . -name '*.DS_Store' -type f -delete && lerna clean && lerna run rm",
     "dev": "npm run vue-to-md && vite",
     "example:hash": "npm run vue-to-md && cross-env VITE_ROUTER_MODE=hash vite",
     "link": "lerna link --force-local",
     "publish": "nrm use npm && lerna publish && nrm use taobao",
     "reload": "yarn remove vite-vue3-docs && yarn add /Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs -D && yarn dev",
     "reset-package-json": "node ./scripts/set-mode",
-    "version": "lerna version",
+    "v": "lerna version",
     "vue-to-md": "node ./scripts/vue-to-md.js",
     "build:pkg": "node ./scripts/select-build.js",
-    "test": "lerna create v-tailor"
+    "test": "lerna create scroll-wrap-vue3"
   },
   "dependencies": {
     "highlight.js": "^10.5.0",

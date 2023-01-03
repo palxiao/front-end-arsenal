@@ -1,7 +1,7 @@
 {
-  "name": "sview",
+  "name": "@palxp/xview",
   "version": "1.0.0",
-  "description": "ui components for vue3",
+  "description": "ui components",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",

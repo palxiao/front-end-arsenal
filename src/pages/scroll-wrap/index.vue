@@ -1,24 +1,23 @@
 <!--
  * @Author: ShawnPhang
- * @Date: 2021-09-26 15:41:01
- * @Description:  
- * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-26 15:44:26
+ * @Date: 2021-09-03 10:11:49
+ * @Description: 
+ * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditTime: 2023-01-03 14:21:21
  * @site: book.palxp.com / blog.palxp.com
 -->
-
 <template>
   <example-frame :main-name="mainName" :readme-list="readmeList" :example-list="exampleList" />
 </template>
 <script lang="ts">
-import ExampleFrame from '@/components/ExampleFrame.vue'
+import ExampleFrame from '../../components/ExampleFrame.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   components: { ExampleFrame },
   setup() {
     return {
-      mainName: 'v-tailor',
+      mainName: 'scroll-wrap',
       readmeList: [
         {
           name: 'README',
@@ -27,9 +26,9 @@ export default defineComponent({
       ],
       exampleList: [
         {
-          name: '测试',
-          introduce: '',
-          highlight: [],
+          name: '基础演示',
+          introduce: '分段滚动页面',
+          highlight: [2, 4, 5, 7, 8, 10, 18],
         },
       ],
     }

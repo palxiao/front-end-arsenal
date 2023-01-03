@@ -2,31 +2,22 @@
  * @Author: ShawnPhang
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
- * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-26 15:37:38
+ * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditTime: 2023-01-03 10:59:57
  * @site: book.palxp.com / blog.palxp.com
 -->
 
-## 技术要点
+## 开始
+
+Node 环境：14.17.0
+
+## TODOLIST
 
 1. [x] 按需打包，独立打包
 2. [x] 指定打包
 3. [ ] 对 d.ts 声明文件进行打包
 4. [x] 提交组件的测试，lerna
 5. [x] 文档的自动生成
-
-## 文档
-
-### API
-
-Name Attributes
-参数名 说明文字 类型 可选值
-
-### 技术方案
-
-装饰器？复合函数？（排除，会增加副作用）
-选择了不增加副作用的编译器插件方式，这里对应 rollup
-工具库将采用`typedoc`生成文档
 
 ## 流程
 
@@ -55,7 +46,7 @@ Name Attributes
 
 持续集成、打包发布：shell、nodejs、git
 
-代码规范、提交规范：vscode 工具集成
+代码规范、提交规范
 
 ## 组件库
 
@@ -65,8 +56,7 @@ Name Attributes
 
 组件库文档工具：VitePress、自己实现
 
-本地开发调试：
-框架库等依赖推荐使用 CDN 引入，不用额外配置
+本地开发调试：框架库等依赖推荐使用 CDN 引入，不用额外配置
 
 ## 函数类工具库
 
@@ -76,9 +66,7 @@ Name Attributes
 
 ## vite 按需加载示例
 
-```
 npm install vite-plugin-importer --save
-```
 
 ```
 yarn add vite-plugin-importer
