@@ -30,6 +30,8 @@
     "reload": "yarn remove vite-vue3-docs && yarn add /Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs -D && yarn dev",
     "reset-package-json": "node ./scripts/set-mode",
     "v": "lerna version",
+    "ls": "lerna list",
+    "change": "lerna changed",
     "vue-to-md": "node ./scripts/vue-to-md.js",
     "build:pkg": "node ./scripts/select-build.js",
     "test": "lerna create scroll-wrap-vue3"

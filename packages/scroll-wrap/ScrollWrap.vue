@@ -3,7 +3,7 @@
  * @Date: 2022-12-18 22:40:14
  * @Description: 滚动组件
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 14:15:48
+ * @LastEditTime: 2023-01-03 16:43:14
 -->
 
 <template>
@@ -33,10 +33,6 @@ export default defineComponent({
       type: String,
       default: '',
     },
-    // modelValue: {
-    //   type: String,
-    //   default: '',
-    // },
   },
   emits: ['done'],
   setup(props, context) {
