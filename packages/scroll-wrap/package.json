@@ -1,6 +1,6 @@
 {
   "name": "@palxp/scroll-wrap-vue3",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vue3滚动包裹组件",
   "keywords": [
     "scroll"
