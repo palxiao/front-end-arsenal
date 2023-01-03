@@ -4,6 +4,9 @@
   "command": {
     "bootstrap": {
       "npmClient": "yarn"
+    },
+    "version": {
+      "conventionalCommits": true
     }
   }
 }
