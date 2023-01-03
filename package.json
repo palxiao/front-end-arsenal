@@ -34,7 +34,7 @@
     "change": "lerna changed",
     "vue-to-md": "node ./scripts/vue-to-md.js",
     "build:pkg": "node ./scripts/select-build.js",
-    "test": "lerna create scroll-wrap-vue3"
+    "test": "lerna create @palxp/scroll-wrap-vue3"
   },
   "dependencies": {
     "highlight.js": "^10.5.0",
