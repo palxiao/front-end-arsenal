@@ -3,13 +3,15 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 10:59:57
+ * @LastEditTime: 2023-05-25 10:58:50
  * @site: book.palxp.com / blog.palxp.com
 -->
 
 ## 开始
 
-Node 环境：14.17.0
+<!-- Node 环境：14.17.0 -->
+
+Node 版本：v16.18.1
 
 ## TODOLIST
 
