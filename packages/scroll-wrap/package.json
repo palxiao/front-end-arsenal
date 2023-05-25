@@ -1,7 +1,7 @@
 {
   "name": "@palxp/scroll-wrap-vue3",
   "version": "1.0.7",
-  "description": "vue3滚动包裹组件",
+  "description": "vue3 滚动包裹组件",
   "author": "ShawnPhang <palxiao@vip.qq.com>",
   "homepage": "https://fe-doc.palxp.com/#/scroll-wrap/readme",
   "license": "ISC",

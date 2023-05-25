@@ -9,7 +9,10 @@
   "keywords": [
     "ts"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "ShawnPhang",
   "license": "ISC",
-  "gitHead": "41514af1b94d1ae96d938def5ee393ba4dc4233a"
+  "gitHead": "2feb2f0994f2f8411a441c5106792940f3dd33c9"
 }
