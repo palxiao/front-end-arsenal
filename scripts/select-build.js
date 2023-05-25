@@ -2,8 +2,8 @@
  * @Author: ShawnPhang
  * @Date: 2021-09-22 19:39:50
  * @Description: 打包选择器
- * @LastEditors: ShawnPhang
- * @LastEditTime: 2022-05-19 15:19:03
+ * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditTime: 2023-05-25 14:57:52
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
