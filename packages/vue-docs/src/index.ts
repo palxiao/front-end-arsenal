@@ -48,7 +48,6 @@ export default function vueDocs(rawOptions?: CustomConfig): Plugin {
   const pkg = require(`${path.join(__dirname, '../package.json')}`)
   const userProjectDir = process.cwd()
 
-  // 临时配置
   const config: Config = {
     base: '/docs',
     componentDir: '/packages',
