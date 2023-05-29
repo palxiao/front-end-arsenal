@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 16:03:22
+ * @LastEditTime: 2023-05-29 18:07:46
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -40,6 +40,8 @@
 代码展示面板部分没有热更新，可以通过运行 `npm run vue-to-md` 来手动更新。
 
 发布运行 `npm run publish`，更新文档网站运行 `npm run build` 然后提交更新。
+
+运行 `npm run change` 生成组件更新日志（lerna）
 
 ## 设计
 

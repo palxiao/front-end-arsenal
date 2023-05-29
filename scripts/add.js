@@ -3,7 +3,7 @@
  * @Date: 2023-05-25 17:45:07
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 17:44:38
+ * @LastEditTime: 2023-05-29 18:17:07
  */
 const { exec } = require('child_process')
 const chalk = require('chalk')
@@ -53,7 +53,7 @@ const readme = (name) => {
   \`\`\`
   yarn add ${scope}${name}
   
-  import ScrollWrap from '${scope}${name}'
+  import ${name} from '${scope}${name}'
   \`\`\`
   
   ## API

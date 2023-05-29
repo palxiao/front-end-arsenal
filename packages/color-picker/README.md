@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:09:49
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 17:39:28
+ * @LastEditTime: 2023-05-29 22:54:18
 -->
 
 <img style="display: inline-block;" src="https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social" />
@@ -23,7 +23,7 @@
 ```
 yarn add @palxp/color-picker
 
-import ScrollWrap from '@palxp/color-picker'
+import colorPicker from '@palxp/color-picker'
 ```
 
 ## API

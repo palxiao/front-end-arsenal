@@ -15,7 +15,7 @@
   ```
   yarn add @palxp/code-panel
   
-  import ScrollWrap from '@palxp/code-panel'
+  import codePanel from '@palxp/code-panel'
   ```
   
   ## API
