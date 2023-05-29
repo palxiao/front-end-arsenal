@@ -34,7 +34,8 @@
     "change": "lerna changed",
     "vue-to-md": "node ./scripts/vue-to-md.js",
     "build:pkg": "node ./scripts/select-build.js",
-    "test": "lerna create @palxp/scroll-wrap-vue3"
+    "add": "node ./scripts/add.js",
+    "remove": "node ./scripts/remove.js"
   },
   "dependencies": {
     "highlight.js": "^10.5.0",
@@ -84,7 +85,7 @@
     "sass": "^1.32.2",
     "typescript": "^4.1.3",
     "vite": "^2.0.0-beta.65",
-    "vite-vue3-docs": "/Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs",
+    "vite-vue3-docs": "^0.0.7",
     "vue-cli-plugin-norm": "~1.2.12",
     "vue-eslint-parser": "^7.6.0",
     "yarn": "^1.22.11"
@@ -94,7 +95,7 @@
       "path": "./node_modules/vue-cli-plugin-norm/lib/cz"
     }
   },
-  "husky-": {
+  "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }

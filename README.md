@@ -3,27 +3,41 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-25 10:58:50
+ * @LastEditTime: 2023-05-27 16:12:14
  * @site: book.palxp.com / blog.palxp.com
 -->
 
-## 开始
+## 前端军火库
 
-<!-- Node 环境：14.17.0 -->
+<!-- START -->
 
-Node 版本：v16.18.1
+#### [ColorPicker 颜色吸管工具](/#/color-picker)
 
-## TODOLIST
+#### [ScrollWrap 吸附滚动组件](/#/scroll-wrap)
 
-1. [x] 按需打包，独立打包
-2. [x] 指定打包
-3. [ ] 对 d.ts 声明文件进行打包
-4. [x] 提交组件的测试，lerna
-5. [x] 文档的自动生成
+#### [CodePanel 代码编辑器](/#/code-panel)
+
+#### [IJS Utils 工具函数集](/#/ijs-utils)
+
+<!-- END -->
+
+## 说明
+
+> 这是一个用于开发 Vue3 组件/组件库、以及函数类工具的仓库。
+>
+> 自动化的文档网站，只需专注于组件的开发，文档全自动生成。
+
+项目启动时 Node 环境：14.17.0 当前使用 Node 版本：v16.18.1
+
+## 为什么组件化
+
+> 拆分组件的意义在于，细化项目的颗粒度，避免将复杂功能耦合在项目中，方便后续迁移、改造、重写、性能调优等工作。
 
 ## 流程
 
-在 packages 中开发，在 example 中查看，在 docs 中展示
+运行 `npm run add` 开始组件，在 `packages` 中开发代码，在 `src/pages` 下编写测试/示例页面。
+
+代码展示面板部分没有热更新，可以通过运行 `npm run vue-to-md` 来手动更新。
 
 ## 设计
 
@@ -40,33 +54,35 @@ Node 版本：v16.18.1
 
 模块包管理：lerna
 
-组件设计：按需加载、扩展性延展性
-
-开发与调试
+组件设计：按需加载
 
 单元测试：mocha、jest
 
-持续集成、打包发布：shell、nodejs、git
+持续集成、代码规范、提交规范
 
-代码规范、提交规范
+## TODOLIST
 
-## 组件库
+1. [x] 按需打包，独立打包
+2. [x] 指定打包
+3. [ ] 对 d.ts 声明文件进行打包
+4. [x] 提交组件的测试，lerna
+5. [x] 文档的自动生成
+
+## 视图组件库
 
 区分：Vue2 Vue3 基于 UI 框架
 
 打包：rollup
 
-组件库文档工具：VitePress、自己实现
-
-本地开发调试：框架库等依赖推荐使用 CDN 引入，不用额外配置
+组件库文档：自动生成
 
 ## 函数类工具库
 
 打包：rollup
 
-文档工具：
+文档工具：JSDoc
 
-## vite 按需加载示例
+## 组件库按需加载示例（vite）
 
 npm install vite-plugin-importer --save
 
@@ -107,7 +123,7 @@ export default defineConfig({
 })
 ```
 
-## webpack 按需加载示例
+## 组件库按需加载示例（webpack）
 
 ```
 yarn add babel-plugin-import -D
@@ -137,7 +153,7 @@ module.exports = {
 }
 ```
 
-## 分包打包
+## 打包发布
 
 查看当前包源
 

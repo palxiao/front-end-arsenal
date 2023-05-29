@@ -1,7 +1,7 @@
 {
-  "name": "@palxp/scroll-wrap-vue3",
-  "version": "1.0.8",
-  "description": "vue3 滚动包裹组件",
+  "name": "@palxp/code-panel",
+  "version": "0.0.1",
+  "description": "///////",
   "author": "ShawnPhang <palxiao@vip.qq.com>",
   "homepage": "https://fe-doc.palxp.com/#/scroll-wrap/readme",
   "license": "ISC",
@@ -18,5 +18,9 @@
   },
   "bugs": {
     "url": "https://github.com/palxiao/front-end-arsenal/issues"
+  },
+  "dependencies": {
+    "@monaco-editor/loader": "^1.3.3",
+    "monaco-editor": "^0.38.0"
   }
 }

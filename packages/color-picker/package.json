@@ -1,9 +1,9 @@
 {
-  "name": "@palxp/scroll-wrap-vue3",
-  "version": "1.0.8",
-  "description": "vue3 滚动包裹组件",
+  "name": "color-picker",
+  "version": "1.0.0",
+  "description": "TODO",
   "author": "ShawnPhang <palxiao@vip.qq.com>",
-  "homepage": "https://fe-doc.palxp.com/#/scroll-wrap/readme",
+  "homepage": "https://fe-doc.palxp.com/#/color-picker",
   "license": "ISC",
   "main": "dist/index.es.js",
   "publishConfig": {
@@ -18,5 +18,8 @@
   },
   "bugs": {
     "url": "https://github.com/palxiao/front-end-arsenal/issues"
+  },
+  "dependencies": {
+    "throttle-debounce": "^5.0.0"
   }
 }

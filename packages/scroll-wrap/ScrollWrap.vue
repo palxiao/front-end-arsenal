@@ -3,13 +3,13 @@
  * @Date: 2022-12-18 22:40:14
  * @Description: 滚动组件
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 17:43:38
+ * @LastEditTime: 2023-05-25 18:19:16
 -->
 
 <template>
   <div ref="wrap" class="sticky">
     <div ref="el" :style="{ height: wh + 'px', background }" :class="['box', { 'release-scroll': relative }]">
-      <!-- 插入内容 -->
+      <!-- 插槽内容 -->
       <slot :progress="scroll"></slot>
     </div>
     <div ref="body" :style="'height:' + long + 'px;'"></div>

@@ -8952,8 +8952,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vite-vue3-docs@/Users/mac/Documents/workSpace/Tools/front-end-arsenal/packages/vue-docs:
-  version "0.0.1"
+vite-vue3-docs@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.npmjs.org/vite-vue3-docs/-/vite-vue3-docs-0.0.7.tgz#97bbdae6e5833974b6192fc1f964d02ad17b2999"
+  integrity sha512-LigEKQwie27FAwHeMgiKLxzpcCiAzFy+mwNdwiZykNGyE+Lm6DkEcxkj4w9HDwk4PAVitfoD66hVTjziv6R0yQ==
   dependencies:
     "@babel/traverse" "^7.14.7"
     "@babel/types" "^7.14.5"

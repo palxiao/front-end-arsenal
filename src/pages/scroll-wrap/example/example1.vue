@@ -1,3 +1,10 @@
+<!--
+ * @Author: ShawnPhang
+ * @Date: 2023-01-03 12:12:20
+ * @Description: 
+ * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditTime: 2023-05-25 16:41:25
+-->
 <template>
   <ScrollWrap v-slot="props" background="#98bec8" :long="1000" :listen="listen">
     <div class="content">{{ percentage(props.progress) }}</div>
@@ -12,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import ScrollWrap from '../../../../packages/scroll-wrap/ScrollWrap.vue'
+import ScrollWrap from '@pkg/scroll-wrap/ScrollWrap.vue'
 import { defineComponent, ref, onMounted } from 'vue'
 export default defineComponent({
   components: { ScrollWrap },
