@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 15:36:56
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 17:12:24
+ * @LastEditTime: 2023-05-29 17:20:19
  * @site: book.palxp.com / blog.palxp.com
  */
 import { routes } from 'virtual:vite-vue3-docs'
@@ -39,6 +39,11 @@ const router = createRouter({
           {
             path: `/${pkg}/readme`,
             name: `${pkg}-readme`,
+            component: () => import('../components/PageReadme.vue'),
+          },
+          {
+            path: `/${pkg}/changelog`,
+            name: `${pkg}-changelog`,
             component: () => import('../components/PageReadme.vue'),
           },
           ...examples.map((example, index) => {

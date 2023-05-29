@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 15:50:24
+ * @LastEditTime: 2023-05-29 17:05:53
 -->
 <template>
   <div class="color-picker">
@@ -86,7 +86,7 @@ import { registerMoveableElement } from './utils/moveable.ts'
 import { hexA2HSLA, HSLA2HexA, hex2RGB, RGB2HSL, hexA2RGBA, RGBA2HexA } from './utils/color.ts'
 import { toGradientString, parseBackgroundValue, toolTip } from './utils/helper.ts'
 import Tabs from './comps/Tabs.vue'
-import xiguan from './svg.vue'
+import xiguan from './comps/svg.vue'
 import TabPanel from './comps/TabPanel.vue'
 import { debounce } from 'throttle-debounce'
 

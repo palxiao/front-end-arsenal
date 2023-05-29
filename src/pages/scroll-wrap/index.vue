@@ -3,7 +3,7 @@
  * @Date: 2023-01-03 12:12:20
  * @Description: 
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 15:09:48
+ * @LastEditTime: 2023-05-29 17:38:27
 -->
 <template>
   <example-frame :main-name="mainName" :readme-list="readmeList" :example-list="exampleList" />
@@ -21,6 +21,10 @@ export default defineComponent({
         {
           name: 'README',
           introduce: '说明文档',
+        },
+        {
+          name: 'CHANGELOG',
+          introduce: '更新日志',
         },
       ],
       exampleList: [

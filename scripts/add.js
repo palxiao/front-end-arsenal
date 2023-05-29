@@ -3,7 +3,7 @@
  * @Date: 2023-05-25 17:45:07
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 16:06:24
+ * @LastEditTime: 2023-05-29 17:44:38
  */
 const { exec } = require('child_process')
 const chalk = require('chalk')
@@ -40,14 +40,14 @@ const packageJson = {
 }
 
 const readme = (name) => {
-  return `![watchs](https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social) ![forks](https://img.shields.io/github/forks/palxiao/front-end-arsenal?style=social) ![stars](https://img.shields.io/github/stars/palxiao/front-end-arsenal?style=social)
+  return `<img style="display: inline-block;" src="https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social" /> <img style="display: inline-block;" src="https://img.shields.io/github/forks/palxiao/front-end-arsenal?style=social" /> <img style="display: inline-block;" src="https://img.shields.io/github/stars/palxiao/front-end-arsenal?style=social" />
   
   # ${name}
 
   > TODO: 
   
-  ![Version](https://img.shields.io/npm/v/${scope}${name}) ![Size](https://img.shields.io/bundlephobia/min/${scope}${name}?color=%2344cc88) ![Download](https://img.shields.io/npm/dm/${scope}${name})
-  
+  <img style="display: inline-block;" src="https://img.shields.io/npm/v/${scope}${name}" /> <img style="display: inline-block;" src="https://img.shields.io/bundlephobia/min/${scope}${name}?color=%2344cc88" /> <img style="display: inline-block;" src="https://img.shields.io/npm/dm/${scope}${name}" />
+
   ## Usage
   
   \`\`\`
@@ -90,12 +90,15 @@ export default defineComponent({
         {
           name: 'README',
           introduce: '说明文档',
+        },{
+          name: 'CHANGELOG',
+          introduce: '更新日志',
         },
       ],
       exampleList: [
         {
           name: '基础演示',
-          introduce: '描述'
+          introduce: ''
         },
       ],
     }

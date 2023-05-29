@@ -3,7 +3,7 @@
  * @Date: 2021-09-25 17:33:01
  * @Description:  
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-25 16:41:44
+ * @LastEditTime: 2023-05-29 17:39:00
 -->
 
 <template>
@@ -22,6 +22,10 @@ export default defineComponent({
         {
           name: 'README',
           introduce: '说明文档',
+        },
+        {
+          name: 'CHANGELOG',
+          introduce: '更新日志',
         },
       ],
       exampleList: [

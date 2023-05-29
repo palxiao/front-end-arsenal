@@ -27,7 +27,7 @@
         </div>
         <p class="nav-title">Document</p>
         <ul class="nav-list">
-          <li v-for="(item, index) in readmeList" :key="index" class="nav-listitem" :class="{ active: page === `${mainName}-readme` }" @click="$router.push({ name: `${mainName}-readme` })">
+          <li v-for="(item, index) in readmeList" :key="index" class="nav-listitem" :class="{ active: page === `${mainName}-${item.name.toLowerCase()}` }" @click="$router.push({ name: `${mainName}-${item.name.toLowerCase()}` })">
             <p class="title">#.{{ item.name }}</p>
             <p class="introduce">
               {{ item.introduce }}
@@ -50,7 +50,7 @@
         <span class="text">&copy; 2021 </span>
       </div>
     </div>
-    <div v-if="page !== `${mainName}-readme`" class="content">
+    <div v-if="page !== `${mainName}-readme` && page !== `${mainName}-changelog`" class="content">
       <div class="content-nav">
         <div class="content-nav-box">
           <div class="content-nav-item" :class="{ active: contentActive === 1 }" @click="contentActive = 1">Example</div>
@@ -71,7 +71,7 @@
         <div class="code-box" v-html="code" />
       </div>
     </div>
-    <div v-if="page === `${mainName}-readme`" class="readme-content">
+    <div v-if="page === `${mainName}-readme` || page === `${mainName}-changelog`" class="readme-content">
       <router-view />
     </div>
   </div>
@@ -81,6 +81,7 @@
 import { computed, defineComponent, ref, reactive, PropType, watch, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ResizeEvent, ResizeDirective } from '@/utils/plugins/resize'
+import { isStringObject } from 'util/types'
 interface Example {
   name: string
   introduce: string
