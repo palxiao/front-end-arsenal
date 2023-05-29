@@ -1,35 +1,12 @@
-<!--
- * @Author: ShawnPhang
- * @Date: 2023-01-03 12:12:20
- * @Description: 
- * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-26 14:19:27
--->
-<template>
-  <Test />
-</template>
+<template><comp /></template>
 
-<script lang="ts">
-import Test from '@pkg/code-panel/code.vue'
-import { defineComponent, ref, onMounted } from 'vue'
-export default defineComponent({
-  components: { Test },
-  setup() {
-    onMounted(() => {})
-    return {}
-  },
-})
-</script>
-
-<style scoped>
-.content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 3vw;
-  font-weight: 600;
-}
-</style>
+  <script lang="ts">
+  import comp from '@pkg/code-panel/index.vue'
+  import { defineComponent } from 'vue'
+  export default defineComponent({
+    components: { comp },
+    setup() {
+      return {}
+    },
+  })
+  </script>

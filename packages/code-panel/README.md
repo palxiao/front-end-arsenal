@@ -1,19 +1,20 @@
-<!--
- * @Author: ShawnPhang
- * @Date: 2023-05-25 17:57:32
- * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-26 14:23:51
--->
+![watchs](https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social) ![forks](https://img.shields.io/github/forks/palxiao/front-end-arsenal?style=social) ![stars](https://img.shields.io/github/stars/palxiao/front-end-arsenal?style=social)
+  
+  # code-panel
 
-# code-panel
-
-> 代码编辑组件
-
-## Usage
-
-```
-const codePanel = require('@palxp/code-panel');
-
-// TODO: DEMONSTRATE API
-```
+  > TODO: 
+  
+  ![Version](https://img.shields.io/npm/v/@palxp/code-panel) ![Size](https://img.shields.io/bundlephobia/min/@palxp/code-panel?color=%2344cc88) ![Download](https://img.shields.io/npm/dm/@palxp/code-panel)
+  
+  ## Usage
+  
+  ```
+  yarn add @palxp/code-panel
+  
+  import ScrollWrap from '@palxp/code-panel'
+  ```
+  
+  ## API
+  [API Docs 链接](/#/docs)
+  <iframe src="/#/docs/code-panel/index?preview=true" frameborder="0"></iframe>
+  

@@ -1,10 +1,3 @@
-<!--
- * @Author: ShawnPhang
- * @Date: 2021-09-03 10:11:49
- * @Description: 
- * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-26 14:23:01
--->
 <template>
   <example-frame :main-name="mainName" :readme-list="readmeList" :example-list="exampleList" />
 </template>
@@ -26,8 +19,7 @@ export default defineComponent({
       exampleList: [
         {
           name: '基础演示',
-          introduce: 'HTML网页编辑器',
-          // highlight: [2, 4, 5, 7, 8, 10, 18, [20, 25]],
+          introduce: '描述'
         },
       ],
     }

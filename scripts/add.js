@@ -3,7 +3,7 @@
  * @Date: 2023-05-25 17:45:07
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 14:59:51
+ * @LastEditTime: 2023-05-29 16:06:24
  */
 const { exec } = require('child_process')
 const chalk = require('chalk')
@@ -105,13 +105,13 @@ export default defineComponent({
 }
 
 const exampleVue = (name) => {
-  return `<template>示例文件</template>
+  return `<template><comp /></template>
 
   <script lang="ts">
-  // import comp from '@pkg/${name}/index.vue'
+  import comp from '@pkg/${name}/index.vue'
   import { defineComponent } from 'vue'
   export default defineComponent({
-    components: {},
+    components: { comp },
     setup() {
       return {}
     },
