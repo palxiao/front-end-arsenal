@@ -95,7 +95,7 @@
       "path": "./node_modules/vue-cli-plugin-norm/lib/cz"
     }
   },
-  "husky": {
+  "husky-": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
