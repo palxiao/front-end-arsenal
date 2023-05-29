@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-27 16:12:14
+ * @LastEditTime: 2023-05-29 16:03:22
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -38,6 +38,8 @@
 运行 `npm run add` 开始组件，在 `packages` 中开发代码，在 `src/pages` 下编写测试/示例页面。
 
 代码展示面板部分没有热更新，可以通过运行 `npm run vue-to-md` 来手动更新。
+
+发布运行 `npm run publish`，更新文档网站运行 `npm run build` 然后提交更新。
 
 ## 设计
 
