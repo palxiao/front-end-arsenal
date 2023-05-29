@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/palxiao/front-end-arsenal/compare/@palxp/scroll-wrap-vue3@1.2.0...@palxp/scroll-wrap-vue3@1.2.1) (2023-05-29)
+
+**Note:** Version bump only for package @palxp/scroll-wrap-vue3
+
+
+
+
+
 # [1.2.0](https://github.com/palxiao/front-end-arsenal/compare/@palxp/scroll-wrap-vue3@1.0.8...@palxp/scroll-wrap-vue3@1.2.0) (2023-05-29)
 
 
