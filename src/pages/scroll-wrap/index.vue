@@ -1,9 +1,9 @@
 <!--
  * @Author: ShawnPhang
- * @Date: 2021-09-03 10:11:49
+ * @Date: 2023-01-03 12:12:20
  * @Description: 
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-25 18:12:49
+ * @LastEditTime: 2023-05-29 15:09:48
 -->
 <template>
   <example-frame :main-name="mainName" :readme-list="readmeList" :example-list="exampleList" />
@@ -28,10 +28,6 @@ export default defineComponent({
           name: '基础演示',
           introduce: '分段滚动页面',
           highlight: [2, 4, 5, 7, 8, 10, 18, [20, 25]],
-        },
-        {
-          name: '测试',
-          introduce: '分段滚动页面',
         },
       ],
     }

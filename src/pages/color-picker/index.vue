@@ -1,3 +1,10 @@
+<!--
+ * @Author: ShawnPhang
+ * @Date: 2023-05-26 17:09:49
+ * @Description: 
+ * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditTime: 2023-05-29 15:15:21
+-->
 <template>
   <example-frame :main-name="mainName" :readme-list="readmeList" :example-list="exampleList" />
 </template>
@@ -19,7 +26,8 @@ export default defineComponent({
       exampleList: [
         {
           name: '基础演示',
-          introduce: '描述'
+          introduce: '描述',
+          highlight: [[1, 5], 8, [12, 18]],
         },
       ],
     }

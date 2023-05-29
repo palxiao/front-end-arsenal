@@ -3,7 +3,7 @@
  * @Date: 2023-05-25 17:45:07
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 14:48:27
+ * @LastEditTime: 2023-05-29 14:59:51
  */
 const { exec } = require('child_process')
 const chalk = require('chalk')
@@ -148,7 +148,7 @@ inquirer
       },
     },
   ])
-  .then(({ name }) => {
+  .then(async ({ name }) => {
     const fsFas = fs.existsSync(path.resolve(`./packages/${name}`))
     if (!fsFas) {
       fs.mkdir(path.resolve(`./packages/${name}`), { recursive: true }, (err) => {
@@ -156,7 +156,7 @@ inquirer
           console.error(err)
         } else {
           // 创建 packageJson
-          packageJson.name = name
+          packageJson.name = scope + name
           packageJson.homepage = `https://fe-doc.palxp.com/#/${name}`
           fs.writeFileSync(path.resolve(`./packages/${name}/package.json`), JSON.stringify(packageJson, null, '\t'))
           // 创建 README 文件

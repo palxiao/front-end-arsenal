@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 14:46:41
+ * @LastEditTime: 2023-05-29 15:50:24
 -->
 <template>
   <div class="color-picker">
@@ -62,7 +62,7 @@
 
     <div class="cp__box">
       <div class="item" @click="onClickStraw">
-        <i v-if="hasEyeDrop" class="icon sd-xggj" />
+        <xiguan v-if="hasEyeDrop" />
         <input v-else class="native" type="color" @input="onClickStraw" />
       </div>
       <input v-model="value" class="input" />
@@ -86,6 +86,7 @@ import { registerMoveableElement } from './utils/moveable.ts'
 import { hexA2HSLA, HSLA2HexA, hex2RGB, RGB2HSL, hexA2RGBA, RGBA2HexA } from './utils/color.ts'
 import { toGradientString, parseBackgroundValue, toolTip } from './utils/helper.ts'
 import Tabs from './comps/Tabs.vue'
+import xiguan from './svg.vue'
 import TabPanel from './comps/TabPanel.vue'
 import { debounce } from 'throttle-debounce'
 
@@ -484,6 +485,7 @@ async function onClickStraw(val) {
       console.log('用户取消了取色')
     }
   }
+  emit('update:value', result)
   emit('native-pick', result)
 }
 </script>
@@ -615,13 +617,16 @@ async function onClickStraw(val) {
   margin-top: 0.875rem;
   display: flex;
   .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     margin-left: 6px;
     width: 24px;
     height: 24px;
-    border-radius: 4px;
     box-sizing: border-box;
-    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 6%);
+    border-radius: 4px;
+    // box-shadow: inset 0 0 0 1px rgb(0 0 0 / 6%);
   }
   .item:first-of-type {
     margin: 0;
@@ -636,12 +641,6 @@ async function onClickStraw(val) {
   .native {
     width: 100%;
     height: 100%;
-  }
-  .sd-xggj {
-    line-height: 24px;
-    margin-left: 2px;
-    font-size: 20px;
-    transform: scale(1.2);
   }
 }
 
