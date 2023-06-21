@@ -3,7 +3,7 @@
  * @Date: 2021-09-22 19:39:50
  * @Description: 打包选择器
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-25 14:57:52
+ * @LastEditTime: 2023-06-21 15:00:39
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
@@ -50,6 +50,7 @@ inquirer.prompt(option).then(async (answers) => {
     await exec(`lerna run build`)
     process.succeed('分包预编译完成')
   }
+  console.log(`编译命令：yarn build:es${answers.compress ? '-mini' : ''} ${answers.packages.join(' ')}`)
   process.start('正在打包: ' + answers.packages + ' ...')
   exec(`yarn build:es${answers.compress ? '-mini' : ''} ${answers.packages.join(' ')}`, (error, stdout, stderr) => {
     // console.log(stdout)

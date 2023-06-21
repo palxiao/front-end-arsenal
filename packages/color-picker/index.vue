@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 17:05:53
+ * @LastEditTime: 2023-05-30 11:22:18
 -->
 <template>
   <div class="color-picker">
@@ -491,6 +491,11 @@ async function onClickStraw(val) {
 </script>
 
 <style lang="scss" scoped>
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .title {
   margin-bottom: 0.75rem;
   font-size: 15px;

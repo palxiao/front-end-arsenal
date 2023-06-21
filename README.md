@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 18:07:46
+ * @LastEditTime: 2023-06-21 14:19:56
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -11,7 +11,7 @@
 
 <!-- START -->
 
-#### [ColorPicker 颜色吸管工具](/#/color-picker)
+#### [ColorPicker 颜色选择器(吸色器)](/#/color-picker)
 
 #### [ScrollWrap 吸附滚动组件](/#/scroll-wrap)
 
@@ -23,21 +23,21 @@
 
 ## 说明
 
-> 这是一个用于开发 Vue3 组件/组件库、以及函数类工具的仓库。
+> 这是一个用于开发 Vue3 组件/组件库、以及工具类函数的仓库。
 >
 > 自动化的文档网站，只需专注于组件的开发，文档全自动生成。
 
-项目启动时 Node 环境：14.17.0 当前使用 Node 版本：v16.18.1
-
 ## 为什么组件化
 
-> 拆分组件的意义在于，细化项目的颗粒度，避免将复杂功能耦合在项目中，方便后续迁移、改造、重写、性能调优等工作。
+> 拆分组件的意义在于，细化项目的颗粒度，避免将复杂功能耦合在项目中，更方便后续的迁移改造、重写或移除、性能调优等工作。
+>
+> 在此基础上，高度抽象的组件还可复用，为其它项目中快速集成功能提供了可能性。
 
 ## 流程
 
 运行 `npm run add` 开始组件，在 `packages` 中开发代码，在 `src/pages` 下编写测试/示例页面。
 
-代码展示面板部分没有热更新，可以通过运行 `npm run vue-to-md` 来手动更新。
+代码展示面板部分暂无热更新，可通过运行 `npm run vue-to-md` 来手动更新。
 
 发布运行 `npm run publish`，更新文档网站运行 `npm run build` 然后提交更新。
 
@@ -184,3 +184,7 @@ npm login
 # OR
 npm addUser
 ```
+
+## 备注
+
+项目启动时 Node 环境：14.17.0 当前使用 Node 版本：v16.18.1

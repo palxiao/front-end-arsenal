@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { onMounted, ref, watch, toRaw } from 'vue'
+import { onMounted, ref, toRaw } from 'vue'
 import * as monaco from 'monaco-editor'
 import editorWorker from 'monaco-editor/esm/vs/editor/editor.worker?worker'
 import jsonWorker from 'monaco-editor/esm/vs/language/json/json.worker?worker'

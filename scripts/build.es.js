@@ -2,8 +2,8 @@
  * @Author: ShawnPhang
  * @Date: 2021-09-02 15:36:56
  * @Description:
- * @LastEditors: ShawnPhang
- * @LastEditTime: 2021-09-23 19:37:22
+ * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditTime: 2023-06-21 15:07:05
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
@@ -19,7 +19,8 @@ walkPackageDirs((dirName) => {
   let option = {
     input: fs.existsSync(`./packages/${dirName}/index.ts`) ? `./packages/${dirName}/index.ts` : `./packages/${dirName}/index.js`,
     output: {
-      file: `./packages/${dirName}/${libName}/index.es.js`,
+      // file: `./packages/${dirName}/${libName}/index.es.js`,
+      dir: `./packages/${dirName}/${libName}`,
       format: 'esm',
     },
   }
