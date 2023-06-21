@@ -5,7 +5,7 @@
   "author": "ShawnPhang <palxiao@vip.qq.com>",
   "homepage": "https://fe-doc.palxp.com/#/j-editor",
   "license": "ISC",
-  "main": "dist/index.js",
+  "main": "index",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "publishConfig": {
