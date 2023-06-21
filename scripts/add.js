@@ -3,7 +3,7 @@
  * @Date: 2023-05-25 17:45:07
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 18:17:07
+ * @LastEditTime: 2023-06-21 15:42:37
  */
 const { exec } = require('child_process')
 const chalk = require('chalk')
@@ -40,7 +40,7 @@ const packageJson = {
 }
 
 const readme = (name) => {
-  return `<img style="display: inline-block;" src="https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social" /> <img style="display: inline-block;" src="https://img.shields.io/github/forks/palxiao/front-end-arsenal?style=social" /> <img style="display: inline-block;" src="https://img.shields.io/github/stars/palxiao/front-end-arsenal?style=social" />
+  return `  <img style="display: inline-block;" src="https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social" /> <img style="display: inline-block;" src="https://img.shields.io/github/forks/palxiao/front-end-arsenal?style=social" /> <img style="display: inline-block;" src="https://img.shields.io/github/stars/palxiao/front-end-arsenal?style=social" />
   
   # ${name}
 
@@ -63,7 +63,7 @@ const readme = (name) => {
 }
 
 const index = () => {
-  return `import { App } from 'vue'
+  return `  import { App } from 'vue'
   import Comp from './index.vue'
   
   Comp.install = (app: App): void => {
