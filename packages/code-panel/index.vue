@@ -44,10 +44,7 @@ self.MonacoEnvironment = {
   },
 }
 export default {
-  props: {
-    // 测试参数
-    test: {},
-  },
+  props: {},
   setup() {
     const htmlEditor = ref(null)
     const cssEditor = ref(null)
