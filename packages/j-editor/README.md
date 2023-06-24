@@ -11,7 +11,7 @@
 ```
 yarn add @palxp/j-editor
 
-import j-editor from '@palxp/j-editor'
+import j-editor from '@palxp/j-editor/index'
 ```
 
 ## API
