@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.4](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.2.3...@palxp/color-picker@1.2.4) (2023-06-29)
+
+
+### Bug Fixes
+
+* 修复一个报错 ([41fdfc8](https://github.com/palxiao/front-end-arsenal/commit/41fdfc8a1a6ef32e221c7fae97b1aa5e24b63a0e))
+
+
+
+
+
 ## [1.2.3](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.2.2...@palxp/color-picker@1.2.3) (2023-06-21)
 
 **Note:** Version bump only for package @palxp/color-picker
