@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-30 11:22:18
+ * @LastEditTime: 2023-06-29 16:31:20
 -->
 <template>
   <div class="color-picker">
@@ -65,7 +65,7 @@
         <xiguan v-if="hasEyeDrop" />
         <input v-else class="native" type="color" @input="onClickStraw" />
       </div>
-      <input v-model="value" class="input" />
+      <input :value="value" @input="$emit('update:value', $event.target.value)" class="input" />
       <div v-for="pc in predefine" :key="pc" class="item" :style="{ background: pc }" @click="onClickStraw({ target: { value: pc } })"></div>
       <!-- <InputNumber v-model:value="alpha" class="w-12" size="small" :min="0" :max="100" @input="onChangeAlpha" @change="onChangeAlpha" /> -->
     </div>
