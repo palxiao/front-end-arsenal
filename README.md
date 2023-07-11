@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-06-21 15:29:02
+ * @LastEditTime: 2023-07-11 23:57:43
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -15,7 +15,7 @@
 
 #### [ScrollWrap 吸附滚动组件](/#/scroll-wrap)
 
-#### [JEditor 掘金 MarkDown 编辑器](/#/j-editor)
+#### <a target="_blank" href="/#/j-editor">JEditor 掘金 MarkDown 编辑器</a>
 
 #### [CodePanel 代码编辑器](/#/code-panel)
 
