@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-07-11 23:57:43
+ * @LastEditTime: 2023-07-17 14:17:45
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -37,13 +37,13 @@
 
 ## 流程
 
-运行 `npm run add` 开始组件，在 `packages` 中开发代码，在 `src/pages` 下编写测试/示例页面。
+1. 运行 `npm run add` 添加组件
 
-代码展示面板部分暂无热更新，可通过运行 `npm run vue-to-md` 来手动更新。
+2. 在 `packages` 中开发代码，在 `src/pages` 下编写测试/示例页面。（代码展示面板部分暂无热更新，可手动运行 `npm run vue-to-md` 来即时更新。）
 
-发布运行 `npm run publish`，更新文档网站运行 `npm run build` 然后提交更新。
+3. 运行 `npm run change` 生成组件更新日志（lerna）
 
-运行 `npm run change` 生成组件更新日志（lerna）
+4. 运行 `npm run publish` 发布组件，运行 `npm run build` 然后提交更新文档网站。
 
 ## 设计
 
