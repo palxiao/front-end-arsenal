@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-07-17 14:20:41
+ * @LastEditTime: 2023-07-18 15:41:52
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -32,7 +32,7 @@
 ## 为什么组件化
 
 > 拆分组件的意义在于，细化项目的颗粒度，避免将复杂功能耦合在项目中，更方便后续的迁移改造、重写或移除、性能调优等工作。
-
+>
 > 在此基础上，高度抽象的组件还可复用，为其它项目中快速集成功能提供了可能性。
 
 ## 流程
