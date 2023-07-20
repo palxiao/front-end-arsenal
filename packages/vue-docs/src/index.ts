@@ -19,6 +19,8 @@ export interface CustomConfig {
   showUse?: boolean
   // header
   header?: ConfigHeader
+  // 是否开启代码区域
+  hasCode?: boolean
 }
 
 interface ConfigHeader {
@@ -101,8 +103,9 @@ export default function vueDocs(rawOptions?: CustomConfig): Plugin {
 
     transform(code, id) {
       if (id.includes('main.ts') || id.includes('main.js')) {
-        code += `import VueHighlightJS from 'vue3-highlightjs';`
-        code += `app.use(VueHighlightJS);`
+        // TODO: 暂时隐藏该功能
+        // code += `import VueHighlightJS from 'vue3-highlightjs';`
+        // code += `app.use(VueHighlightJS);`
         return code
       }
 
