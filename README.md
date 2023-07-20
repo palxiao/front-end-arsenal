@@ -3,7 +3,7 @@
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-07-18 15:41:52
+ * @LastEditTime: 2023-07-20 16:37:14
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -43,9 +43,11 @@
 
 3. 运行 `npm run change` 生成组件更新日志（lerna）
 
-4. 运行 `npm run publish` 发布组件
+4. 运行 `npm run build:pkg` 编译组件
 
-5. 运行 `npm run build` 然后提交更新文档网站。（可能需要一些时间，因为会将所有组件案例打包）
+5. 运行 `npm run publish` 发布组件
+
+6. 运行 `npm run build` 然后提交更新文档网站。（可能需要一些时间，因为会将所有组件案例打包）
 
 ## 设计
 

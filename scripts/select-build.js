@@ -3,7 +3,7 @@
  * @Date: 2021-09-22 19:39:50
  * @Description: 打包选择器
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-06-21 15:00:39
+ * @LastEditTime: 2023-07-20 16:38:04
  * @site: book.palxp.com / blog.palxp.com
  */
 const fs = require('fs')
@@ -13,7 +13,7 @@ const inquirer = require('inquirer')
 
 let dirNames = fs.readdirSync('packages')
 dirNames = dirNames.filter((name) => {
-  if (name !== 'vue-docs') {
+  if (name !== '.DS_Store' && name !== 'vue-docs') {
     return { name }
   }
 })
