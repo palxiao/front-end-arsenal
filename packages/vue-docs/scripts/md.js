@@ -3,7 +3,7 @@
  * @Date: 2022-05-18 18:04:50
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-01-03 11:02:29
+ * @LastEditTime: 2023-07-26 16:35:18
  */
 /*eslint-disable*/
 
@@ -24,7 +24,8 @@ const md = require('markdown-it')({
 })
 const root = process.cwd()
 const changelog = path.join(root, '../../CHANGELOG.md')
-const hello = path.join(root, '../../README.md')
+// const hello = path.join(root, '../../README.md')
+const hello = path.join(root, './README.md')
 
 fs.writeFileSync('./README.md', fs.readFileSync(hello, 'utf-8').replace('![preview](./preview.png)', ''))
 
