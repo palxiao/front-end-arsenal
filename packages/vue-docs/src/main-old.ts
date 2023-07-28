@@ -20,9 +20,10 @@ export function vueToJsonData(code: string): { content: RenderData; component: C
   }
 
   if (descriptor.script) {
-    const { name, emits, props } = handleScript(descriptor.script)
+    const { name, emits, methods, props } = handleScript(descriptor.script)
     componentData.name = name
     componentData.emits = emits
+    componentData.methods = methods
     componentData.props = props
   }
 
@@ -52,6 +53,7 @@ export function handleScript(script: SFCScriptBlock): Component {
     name: '',
     props: [],
     emits: [],
+    methods: [],
   }
 
   traverse(ast, {
@@ -86,6 +88,7 @@ export function handleScript(script: SFCScriptBlock): Component {
 function handleExportDefault(ast: ObjectExpression): Component {
   let props: Prop[] = []
   let emits: Emit[] = []
+  let methods: Method[] = []
   let componentName = ''
 
   ast.properties.map((vueParams) => {
@@ -117,6 +120,11 @@ function handleExportDefault(ast: ObjectExpression): Component {
 
           break
         }
+
+        case 'methods': {
+          methods = getMethodsByObject(vueParams.value as ObjectExpression)
+          break
+        }
       }
     }
   })
@@ -125,6 +133,7 @@ function handleExportDefault(ast: ObjectExpression): Component {
     name: componentName,
     props,
     emits,
+    methods,
   }
 }
 
@@ -172,26 +181,26 @@ function componentToLayoutData(component: Component): RenderData {
     }
   }
 
-  // if (methods && methods.length) {
-  //   json.methods = {
-  //     h3: 'Methods',
-  //     table: {
-  //       headers: ['方法名', '说明', '参数: 说明', '返回值'],
-  //       rows: methods.map((method) => {
-  //         return [
-  //           method.name,
-  //           method.desc || '-',
-  //           method.params?.length
-  //             ? method.params.map((item) => {
-  //                 return `${item.name}: ${item.notes}`
-  //               })
-  //             : '-',
-  //           method.return || '-',
-  //         ]
-  //       }),
-  //     },
-  //   }
-  // }
+  if (methods && methods.length) {
+    json.methods = {
+      h3: 'Methods',
+      table: {
+        headers: ['方法名', '说明', '参数: 说明', '返回值'],
+        rows: methods.map((method) => {
+          return [
+            method.name,
+            method.desc || '-',
+            method.params?.length
+              ? method.params.map((item) => {
+                  return `${item.name}: ${item.notes}`
+                })
+              : '-',
+            method.return || '-',
+          ]
+        }),
+      },
+    }
+  }
 
   return json
 }
