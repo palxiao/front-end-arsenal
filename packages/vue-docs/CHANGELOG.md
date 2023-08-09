@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.14](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.0.13...vite-vue3-docs@0.0.14) (2023-08-09)
+
+
+### Bug Fixes
+
+* 修复auto docs watch bug ([f528f17](https://github.com/palxiao/front-end-arsenal/commit/f528f177816e84e85f9f59a7ac1a24fb61242426))
+
+
+
+
+
 ## [0.0.13](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.0.12...vite-vue3-docs@0.0.13) (2023-07-28)
 
 **Note:** Version bump only for package vite-vue3-docs
