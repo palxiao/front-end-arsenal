@@ -1,1 +1,29 @@
-var i='\x3c!--\n * @Author: ShawnPhang\n * @Date: 2023-05-26 17:09:49\n * @Description:\n * @LastEditors: ShawnPhang <site: book.palxp.com>\n * @LastEditTime: 2023-05-29 22:54:18\n--\x3e\n\n<img style="display: inline-block;" src="https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social" />\n<img style="display: inline-block;" src="https://img.shields.io/github/forks/palxiao/front-end-arsenal?style=social" />\n<img style="display: inline-block;" src="https://img.shields.io/github/stars/palxiao/front-end-arsenal?style=social" />\n\n<h1 id="color-picker">color-picker</h1>\n<blockquote>\n<p>TODO:</p>\n</blockquote>\n<img style="display: inline-block;" src="https://img.shields.io/npm/v/@palxp/color-picker" />\n<img style="display: inline-block;" src="https://img.shields.io/bundlephobia/min/@palxp/color-picker?color=%2344cc88" />\n<img style="display: inline-block;" src="https://img.shields.io/npm/dm/@palxp/color-picker" />\n\n<h2 id="usage">Usage</h2>\n<pre><code>yarn add @palxp/color-picker\n\n<span class="hljs-keyword">import</span> colorPicker <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@palxp/color-picker&#x27;</span>\n</code></pre>\n<h2 id="api">API</h2>\n<p><a href="/#/docs">API Docs 链接</a></p>\n  <iframe src="/#/docs/color-picker/index?preview=true" frameborder="0"></iframe>\n';export{i as default};
+var i=`<!--
+ * @Author: ShawnPhang
+ * @Date: 2023-05-26 17:09:49
+ * @Description:
+ * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditTime: 2023-05-29 22:54:18
+-->
+
+<img style="display: inline-block;" src="https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social" />
+<img style="display: inline-block;" src="https://img.shields.io/github/forks/palxiao/front-end-arsenal?style=social" />
+<img style="display: inline-block;" src="https://img.shields.io/github/stars/palxiao/front-end-arsenal?style=social" />
+
+<h1 id="color-picker">color-picker</h1>
+<blockquote>
+<p>TODO:</p>
+</blockquote>
+<img style="display: inline-block;" src="https://img.shields.io/npm/v/@palxp/color-picker" />
+<img style="display: inline-block;" src="https://img.shields.io/bundlephobia/min/@palxp/color-picker?color=%2344cc88" />
+<img style="display: inline-block;" src="https://img.shields.io/npm/dm/@palxp/color-picker" />
+
+<h2 id="usage">Usage</h2>
+<pre><code>yarn add @palxp/color-picker
+
+<span class="hljs-keyword">import</span> colorPicker <span class="hljs-keyword">from</span> <span class="hljs-string">&#x27;@palxp/color-picker&#x27;</span>
+</code></pre>
+<h2 id="api">API</h2>
+<p><a href="/#/docs">API Docs \u94FE\u63A5</a></p>
+  <iframe src="/#/docs/color-picker/index?preview=true" frameborder="0"></iframe>
+`;export{i as default};
