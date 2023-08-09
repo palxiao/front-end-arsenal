@@ -3,7 +3,7 @@
  * @Date: 2022-05-18 18:04:50
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-07-28 15:10:08
+ * @LastEditTime: 2023-07-31 09:25:41
  */
 import { parse } from '@vue/compiler-sfc'
 import { handleScript } from '../src/main'
@@ -15,7 +15,7 @@ test('test handleScript emits 1', () => {
     name: 'hello-world',
     props: [],
     emits: [{ name: 'click', notes: '' }],
-    // methods: [],
+    // // methods: [],
   })
 })
 
@@ -25,7 +25,7 @@ test('test handleScript emits 2', () => {
     name: 'hello-world',
     props: [],
     emits: [{ name: 'click', notes: ' 这是事件注释' }],
-    // methods: [],
+    // // methods: [],
   })
 })
 

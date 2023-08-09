@@ -48,7 +48,7 @@ export function handleScript(script: SFCScriptBlock): Component {
     plugins: script.lang === 'ts' ? ['typescript'] : [],
   })
 
-  let component: Component = {
+  let component: any = {
     name: '',
     props: [],
     emits: [],
@@ -60,7 +60,11 @@ export function handleScript(script: SFCScriptBlock): Component {
       if (path.isCallExpression()) {
         path.node.arguments.map((item) => {
           if (t.isObjectExpression(item)) {
-            component = handleExportDefault(item)
+            const cache: any = handleExportDefault(item)
+            // eslint-disable-next-line guard-for-in
+            for (const key in cache) {
+              !!String(cache[key]) && (component[key] = cache[key])
+            }
           }
         })
       }
