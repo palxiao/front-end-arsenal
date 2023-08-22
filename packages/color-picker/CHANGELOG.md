@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.2.5...@palxp/color-picker@1.3.0) (2023-08-22)
+
+
+### Features
+
+* **component:** color-picker add blur ([1a3d1b0](https://github.com/palxiao/front-end-arsenal/commit/1a3d1b073dcbbc1a8c30ad625cd7eed285665932))
+
+
+
+
+
 ## [1.2.5](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.2.4...@palxp/color-picker@1.2.5) (2023-06-29)
 
 **Note:** Version bump only for package @palxp/color-picker
