@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-06-29 16:31:20
+ * @LastEditTime: 2023-08-22 23:46:41
 -->
 <template>
   <div class="color-picker">
@@ -65,7 +65,8 @@
         <xiguan v-if="hasEyeDrop" />
         <input v-else class="native" type="color" @input="onClickStraw" />
       </div>
-      <input :value="value" @input="$emit('update:value', $event.target.value)" class="input" />
+      <!-- <input :value="value" @input="$emit('update:value', $event.target.value)" class="input" /> -->
+      <input :value="value" class="input" @blur="onInputBlur" />
       <div v-for="pc in predefine" :key="pc" class="item" :style="{ background: pc }" @click="onClickStraw({ target: { value: pc } })"></div>
       <!-- <InputNumber v-model:value="alpha" class="w-12" size="small" :min="0" :max="100" @input="onChangeAlpha" @change="onChangeAlpha" /> -->
     </div>
@@ -117,7 +118,7 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmits(['update:value', 'native-pick'])
+const emit = defineEmits(['update:value', 'native-pick', 'blur'])
 
 const mode = ref(parseBackgroundValue(props.value)) // 颜色、渐变、图片
 const angle = ref(90)
@@ -487,6 +488,21 @@ async function onClickStraw(val) {
   }
   emit('update:value', result)
   emit('native-pick', result)
+}
+
+const onInputBlur = (e) => {
+  emit('blur', patchHexColor(e.target.value))
+}
+
+function patchHexColor(str) {
+  let hex = str.replace(/\s/g, '') // 移除空格
+  if (!str.startsWith('#')) {
+    hex = '#' + hex
+  }
+  if (hex.length < 9) {
+    hex = hex.padEnd(9, 'f')
+  }
+  return hex
 }
 </script>
 
