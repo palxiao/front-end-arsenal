@@ -23,5 +23,6 @@
   },
   "dependencies": {
     "throttle-debounce": "^5.0.0"
-  }
+  },
+  "gitHead": "cd4ed1690ad63903df55ed805e9ce205a04aac8f"
 }

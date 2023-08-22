@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:09:49
  * @Description:
  * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-05-29 22:54:18
+ * @LastEditTime: 2023-08-22 23:51:39
 -->
 
 <img style="display: inline-block;" src="https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social" />
@@ -12,7 +12,7 @@
 
 # color-picker
 
-> TODO:
+> TODO: 颜色取色器，适用于 Vue3
 
 <img style="display: inline-block;" src="https://img.shields.io/npm/v/@palxp/color-picker" />
 <img style="display: inline-block;" src="https://img.shields.io/bundlephobia/min/@palxp/color-picker?color=%2344cc88" />
