@@ -76,10 +76,11 @@ class DocsRoute {
   }
 
   getRoutePathByFile(file: string): string | null {
-    let newFile = file
-    if (file.includes('demo')) {
-      newFile = file.replace('.demo.vue', '.vue')
-    }
+    const newFile = file
+    // TODO: 屏蔽Demo
+    // if (file.includes('demo')) {
+    //   newFile = file.replace('.demo.vue', '.vue')
+    // }
 
     if (this.config.fileExp.test(newFile)) {
       const path = newFile.replace(this.config.root, '').replace('.vue', '')
@@ -104,13 +105,13 @@ class DocsRoute {
     return null
   }
 
-  getRouteDemo(route: Route, demoFile: string): Demo {
-    return {
-      file: demoFile,
-      name: route.name + 'Demo',
-      code: fs.readFileSync(demoFile, 'utf-8'),
-    }
-  }
+  // getRouteDemo(route: Route, demoFile: string): Demo {
+  //   return {
+  //     file: demoFile,
+  //     name: route.name + 'Demo',
+  //     code: fs.readFileSync(demoFile, 'utf-8'),
+  //   }
+  // }
 
   add(file: string): { [key: string]: Route } {
     const routePath = this.getRoutePathByFile(file)
@@ -129,11 +130,11 @@ class DocsRoute {
       component: '',
       data: result?.content,
     }
-
-    if (fs.existsSync(demoFile)) {
-      route.demo = this.getRouteDemo(route, demoFile)
-      // debug.route("add demo %O", route.demo);
-    }
+    // TODO: 屏蔽Demo
+    // if (fs.existsSync(demoFile)) {
+    //   route.demo = this.getRouteDemo(route, demoFile)
+    //   // debug.route("add demo %O", route.demo);
+    // }
 
     const cacheDir = Cache.childFile(this.config, route)
 
@@ -143,13 +144,13 @@ class DocsRoute {
 
     route.component = `() => import('${cacheDir}')`
 
-    if (fs.existsSync(demoFile)) {
-      route.demo = {
-        file: demoFile,
-        name: toPascalCase(routeName + '-demo'),
-        code: fs.readFileSync(demoFile, 'utf-8'),
-      }
-    }
+    // if (fs.existsSync(demoFile)) {
+    //   route.demo = {
+    //     file: demoFile,
+    //     name: toPascalCase(routeName + '-demo'),
+    //     code: fs.readFileSync(demoFile, 'utf-8'),
+    //   }
+    // }
 
     this.route[routePath] = route
     return this.route
@@ -161,7 +162,7 @@ class DocsRoute {
     const route = this.route[routePath]
 
     if (file.includes('.demo.vue')) {
-      route.demo = this.getRouteDemo(route, file)
+      // route.demo = this.getRouteDemo(route, file)
     } else {
       const result = vueToJsonData(fs.readFileSync(file, 'utf-8'))
       debug.route('change %O', this.route[routePath])
@@ -195,14 +196,14 @@ class DocsRoute {
         },
       }
 
-      if (route.demo) {
-        const demoName = route.demo.name
-        demoImports.push(`import ${demoName} from "${route.demo.file}"`)
-        demoComponent.push(`Vue.component('${demoName}', ${demoName})`)
-      }
+      // if (route.demo) {
+      //   const demoName = route.demo.name
+      //   demoImports.push(`import ${demoName} from "${route.demo.file}"`)
+      //   demoComponent.push(`Vue.component('${demoName}', ${demoName})`)
+      // }
 
       arr.push(
-        JSON.stringify(json).replace(/"\(\) => .*?\)"/, function (str) {
+        JSON.stringify(json).replace(/"\(\) => .*?\)"/, (str) => {
           return str.replace(/"/g, '')
         }),
       )
@@ -216,15 +217,16 @@ class DocsRoute {
 
     Cache.createLayout(this.config, this)
 
-    debug.route('demo imports %O', demoImports)
-    debug.route('demo component %O', demoComponent)
+    // debug.route('demo imports %O', demoImports)
+    // debug.route('demo component %O', demoComponent)
 
     let code = `export const routes = ${layout.replace(/\s+|\n+/g, '')};\n`
-    code += `${demoImports.length <= 1 ? demoImports.join(';') + ';\n' : demoImports.join(';\n') + ';\n'}`
-
-    debug.route('demo plugin', `export function initVueDocsDemo(Vue) {${demoComponent.length <= 1 ? demoComponent.join(',') + '\n' : demoComponent.join(';\n')}};`)
-
-    code += `export function initVueDocsDemo(Vue) {${demoComponent.length <= 1 ? demoComponent.join(',') + '\n' : demoComponent.join(';\n')}};`.replace(/\n+/g, '')
+    // code += `${demoImports.length <= 1 ? demoImports.join(';') + ';\n' : demoImports.join(';\n') + ';\n'}`
+    // debug.route('demo plugin', `export function initVueDocsDemo(Vue) {${demoComponent.length <= 1 ? demoComponent.join(',') + '\n' : demoComponent.join(';\n')}};`)
+    // code += `export function initVueDocsDemo(Vue) {${demoComponent.length <= 1 ? demoComponent.join(',') + '\n' : demoComponent.join(';\n')}};`.replace(/\n+/g, '')
+    code += `${demoImports.join(';') + ';\n'}`
+    debug.route('demo plugin', `export function initVueDocsDemo(Vue) {${demoComponent.join(',') + '\n'}};`)
+    code += `export function initVueDocsDemo(Vue) {${demoComponent.join(',') + '\n'}};`.replace(/\n+/g, '')
     code += `export default routes;`
 
     return code
