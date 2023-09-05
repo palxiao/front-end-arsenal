@@ -93,7 +93,9 @@ class DocsRoute {
   getRouteNameByFile(file: string): string | null {
     const routePath = this.getRoutePathByFile(file)
     if (routePath) {
-      return toPascalCase(routePath.replace(/\//g, '_'))
+      const arr = routePath.split('/')
+      arr.splice(0, 2)
+      return toPascalCase(arr.join('/').replace(/\//g, '_'))
     }
 
     return null
