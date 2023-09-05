@@ -91,13 +91,14 @@ export default function vueDocs(rawOptions?: CustomConfig): Plugin {
 
     async load(id) {
       if (id !== MODULE_NAME_VIRTUAL) return null
-      const files = await fg(['.editorconfig', `${config.root}/**!(vue-docs)/*.vue`])
+      // TODO: 遍历所有子文件夹
+      // const files = await fg(['.editorconfig', `${config.root}/**!(vue-docs)/*.vue`])
+      const files = await fg(['.editorconfig', `${config.root}/**/*.vue`])
       files.map((item) => {
-        if (!item.includes('demo')) {
+        if (!item.includes('demo') && !item.includes('vue-docs')) {
           Route.add(item)
         }
       })
-
       return Route.toClientCode()
     },
 

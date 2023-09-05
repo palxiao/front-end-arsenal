@@ -105,13 +105,13 @@ class DocsRoute {
     return null
   }
 
-  // getRouteDemo(route: Route, demoFile: string): Demo {
-  //   return {
-  //     file: demoFile,
-  //     name: route.name + 'Demo',
-  //     code: fs.readFileSync(demoFile, 'utf-8'),
-  //   }
-  // }
+  getRouteDemo(route: Route, demoFile: string): Demo {
+    return {
+      file: demoFile,
+      name: route.name + 'Demo',
+      code: fs.readFileSync(demoFile, 'utf-8'),
+    }
+  }
 
   add(file: string): { [key: string]: Route } {
     const routePath = this.getRoutePathByFile(file)
@@ -130,11 +130,11 @@ class DocsRoute {
       component: '',
       data: result?.content,
     }
-    // TODO: 屏蔽Demo
-    // if (fs.existsSync(demoFile)) {
-    //   route.demo = this.getRouteDemo(route, demoFile)
-    //   // debug.route("add demo %O", route.demo);
-    // }
+    // TODO: 已屏蔽Demo的执行
+    if (fs.existsSync(demoFile)) {
+      route.demo = this.getRouteDemo(route, demoFile)
+      // debug.route("add demo %O", route.demo);
+    }
 
     const cacheDir = Cache.childFile(this.config, route)
 
