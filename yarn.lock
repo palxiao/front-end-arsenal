@@ -9057,22 +9057,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vite-vue3-docs@/Users/shawn/Documents/WorkSpace/Tools/front-end-arsenal/packages/vue-docs:
-  version "0.1.0"
-  dependencies:
-    "@babel/traverse" "^7.14.7"
-    "@babel/types" "^7.14.5"
-    "@vue/compiler-sfc" "^3.1.2"
-    cheerio "^1.0.0-rc.10"
-    comment-parser "^1.1.5"
-    fast-glob "^3.2.7"
-    fs-extra "^10.0.0"
-    humps "^2.0.1"
-    vue-router "4"
-    vue3-highlightjs "^1.0.5"
-
-"vite-vue3-docs@file:packages/vue-docs":
-  version "0.1.0"
+vite-vue3-docs@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/vite-vue3-docs/-/vite-vue3-docs-0.1.1.tgz#3eeee54117c5d0577c3756f729dbed8c56c2b999"
+  integrity sha512-tkgjJh3KOKEMpCSZVCYaymdjshO+NHGSN2m7k0DmapU9nPBBybozAB+y/HuSfnatqu0ZRNx/O3l2umSlahAMLA==
   dependencies:
     "@babel/traverse" "^7.14.7"
     "@babel/types" "^7.14.5"
