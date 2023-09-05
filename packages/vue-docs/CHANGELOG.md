@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.1.0...vite-vue3-docs@0.1.1) (2023-09-05)
+
+**Note:** Version bump only for package vite-vue3-docs
+
+
+
+
+
 # [0.1.0](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.0.15...vite-vue3-docs@0.1.0) (2023-09-05)
 
 
