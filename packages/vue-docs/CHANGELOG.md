@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.0.15...vite-vue3-docs@0.1.0) (2023-09-05)
+
+
+### Features
+
+* **custom:** vue-docs ([60a0975](https://github.com/palxiao/front-end-arsenal/commit/60a0975530c71bd58aa8c5ea48b9ad5192bc5c62))
+
+
+
+
+
 ## [0.0.15](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.0.14...vite-vue3-docs@0.0.15) (2023-09-03)
 
 **Note:** Version bump only for package vite-vue3-docs
