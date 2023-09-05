@@ -1,15 +1,15 @@
-<!--
- * @Author: ShawnPhang
- * @Date: 2023-05-25 15:12:01
- * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-09-05 17:20:07
--->
-
 # Change Log
 
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+
+## [0.1.2](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.1.1...vite-vue3-docs@0.1.2) (2023-09-05)
+
+**Note:** Version bump only for package vite-vue3-docs
+
+
+
+
 
 ## [0.1.1](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.1.0...vite-vue3-docs@0.1.1) (2023-09-05)
 
