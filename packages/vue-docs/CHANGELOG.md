@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.1.2...vite-vue3-docs@0.2.0) (2023-09-10)
+
+
+### Features
+
+* **custom:** vue-doc临时添加setupProps解析支持 ([294243b](https://github.com/palxiao/front-end-arsenal/commit/294243b1cba6fd124abbdec23e2ee4985dce1da7))
+
+
+
+
+
 ## [0.1.2](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.1.1...vite-vue3-docs@0.1.2) (2023-09-05)
 
 **Note:** Version bump only for package vite-vue3-docs
