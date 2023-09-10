@@ -2,8 +2,8 @@
  * @Author: ShawnPhang
  * @Date: 2022-05-18 18:04:50
  * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-07-28 15:09:49
+ * @LastEditors: ShawnPhang <https://m.palxp.cn>
+ * @LastEditTime: 2023-09-10 23:56:50
  */
 import { parse } from '@vue/compiler-sfc'
 import { handleScript } from '../src/main'
@@ -11,8 +11,8 @@ import { props1, props2, props3, props4, props5 } from './data/props'
 
 test('test handleScript props 1', () => {
   const { descriptor } = parse(props1)
-  expect(handleScript(descriptor.script)).toEqual({
-    name: 'hello-world',
+  expect(handleScript(descriptor.scriptSetup, true)).toEqual({
+    name: 'default-component',
     props: [
       {
         name: 'name',

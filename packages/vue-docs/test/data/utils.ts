@@ -20,3 +20,9 @@ export default {
 }
 </script>`
 }
+
+export function defineSetup(content, template) {
+  return `<template>${template}</template><script setup>
+  ${content}
+</script>`
+}

@@ -24,6 +24,11 @@ export function vueToJsonData(code: string): { content: RenderData; component: C
     componentData.name = name
     componentData.emits = emits
     componentData.props = props
+  } else if (descriptor.scriptSetup) {
+    const { name, props } = handleScript(descriptor.scriptSetup, true)
+    componentData.name = name
+    componentData.emits = []
+    componentData.props = props
   }
 
   // 获取slot
@@ -42,8 +47,18 @@ export function vueToJsonData(code: string): { content: RenderData; component: C
   return null
 }
 
-export function handleScript(script: SFCScriptBlock): Component {
-  const ast = babelParse(script.content, {
+export function handleScript(script: SFCScriptBlock, setup = false): Component {
+  let scriptContent = script.content
+  if (setup) {
+    const regex = /(defineProps\(\s*){([\s\S]+?)}(\s*\))/
+    const match: any = script.content.match(regex)
+    scriptContent = `export default {
+      name: 'DefaultComponent',
+      props: {${match[2]}}
+    }`
+  }
+
+  const ast = babelParse(scriptContent, {
     sourceType: 'module',
     plugins: script.lang === 'ts' ? ['typescript'] : [],
   })
@@ -53,9 +68,12 @@ export function handleScript(script: SFCScriptBlock): Component {
     props: [],
     emits: [],
   }
+  // test && console.log(222, ast)
 
   traverse(ast, {
     enter(path: NodePath) {
+      // test && console.log(111, path.node)
+
       // export default defineComponent({})
       if (path.isCallExpression()) {
         path.node.arguments.map((item) => {
