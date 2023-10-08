@@ -3,7 +3,7 @@ import { resizeCanvas } from '../helpers/dom-helper'
 import { computeBoardRect } from '../helpers/init-compute'
 import { initMatting } from '../helpers/init-matting'
 import { MattingProps, UseInitMattingBoardsConfig } from '../types/init-matting'
-import { debounce } from 'lodash'
+import { debounce } from 'throttle-debounce'
 import { onMounted, onUnmounted, watch } from 'vue'
 
 export function useInitMattingBoards(props: MattingProps, useInitMattingBoardsConfig: UseInitMattingBoardsConfig) {
@@ -54,7 +54,7 @@ export function useInitMattingBoards(props: MattingProps, useInitMattingBoardsCo
   })
   onMounted(() => {
     window.addEventListener(EventType.Resize, resizeBoards)
-    window.addEventListener('scroll', debounce(updateBoardRect, UPDATE_BOARDRECT_DEBOUNCE_TIME))
+    window.addEventListener('scroll', debounce(UPDATE_BOARDRECT_DEBOUNCE_TIME, updateBoardRect))
   })
   onUnmounted(() => {
     window.removeEventListener(EventType.Resize, resizeBoards)

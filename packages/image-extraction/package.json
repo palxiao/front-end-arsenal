@@ -22,6 +22,6 @@
     "url": "https://github.com/palxiao/front-end-arsenal/issues"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "throttle-debounce": "^5.0.0"
   }
 }
