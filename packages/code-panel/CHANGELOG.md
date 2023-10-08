@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.5](https://github.com/palxiao/front-end-arsenal/compare/@palxp/code-panel@1.2.4...@palxp/code-panel@1.2.5) (2023-10-08)
+
+**Note:** Version bump only for package @palxp/code-panel
+
+
+
+
+
 ## [1.2.4](https://github.com/palxiao/front-end-arsenal/compare/@palxp/code-panel@1.2.3...@palxp/code-panel@1.2.4) (2023-06-21)
 
 **Note:** Version bump only for package @palxp/code-panel
