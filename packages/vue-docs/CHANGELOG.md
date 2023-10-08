@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.2.0...vite-vue3-docs@0.3.0) (2023-10-08)
+
+
+### Features
+
+* **custom:** 增加Matting组件 ([b26b4dd](https://github.com/palxiao/front-end-arsenal/commit/b26b4dddd11a273adeb97104a6aa2707fb8be920))
+
+
+
+
+
 # [0.2.0](https://github.com/palxiao/front-end-arsenal/compare/vite-vue3-docs@0.1.2...vite-vue3-docs@0.2.0) (2023-09-10)
 
 
