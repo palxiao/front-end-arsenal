@@ -2,7 +2,7 @@
  * @Author: ShawnPhang
  * @Date: 2022-05-18 18:04:50
  * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-08-09 10:09:11
  */
 import { parse } from '@vue/compiler-sfc'

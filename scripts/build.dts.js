@@ -1,36 +1,36 @@
 /*
  * @Author: ShawnPhang
  * @Date: 2021-09-02 15:36:56
- * @Description: 
+ * @Description:
  * @LastEditors: ShawnPhang
  * @LastEditTime: 2021-09-11 13:45:55
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
  */
-const fs = require('fs');
-const path = require('path');
-const chalk = require('chalk');
-const ts = require('typescript');
-console.log(chalk.blue('正在生成dts!'));
-const tsFiles = [];
-walkDir('packages', path => {
-  const files = fs.readdirSync(path);
-  files.map(file => {
+const fs = require('fs')
+const path = require('path')
+const chalk = require('chalk')
+const ts = require('typescript')
+console.log(chalk.blue('正在生成dts!'))
+const tsFiles = []
+walkDir('packages', (path) => {
+  const files = fs.readdirSync(path)
+  files.map((file) => {
     if (/\.ts$/.test(file)) {
-      tsFiles.push(`${path}/${file}`);
+      tsFiles.push(`${path}/${file}`)
     }
-  });
-});
+  })
+})
 
-compile(tsFiles);
+compile(tsFiles)
 
 // 遇到文件执行回调
 function walkDir(distDir, callback) {
-  const whiteList = ['shared'];
-  const fileOrDirs = fs.readdirSync(distDir);
+  const whiteList = ['shared']
+  const fileOrDirs = fs.readdirSync(distDir)
   for (const fileOrDir of fileOrDirs) {
-    const path = `${distDir}/${fileOrDir}`;
+    const path = `${distDir}/${fileOrDir}`
     if (!whiteList.includes(fileOrDir)) {
-      callback(path);
+      callback(path)
     }
   }
 }
@@ -40,8 +40,8 @@ function compile(fileNames) {
   const options = {
     declaration: true,
     emitDeclarationOnly: true,
-  };
-  const host = ts.createCompilerHost(options);
+  }
+  const host = ts.createCompilerHost(options)
   // host.writeFile = (fileName, contents) => {
   //   const typeFileName = path.basename(fileName);
   //   const typeDir = path.dirname(fileName);
@@ -54,6 +54,6 @@ function compile(fileNames) {
   //   fs.writeFileSync(filePath, contents);
   //   console.log(fileName, chalk.green(filePath));
   // };
-  const program = ts.createProgram(fileNames, options, host);
-  program.emit();
+  const program = ts.createProgram(fileNames, options, host)
+  program.emit()
 }

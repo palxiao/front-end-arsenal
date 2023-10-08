@@ -2,7 +2,7 @@
  * @Author: ShawnPhang
  * @Date: 2023-04-26 11:30:10
  * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-05-27 17:24:41
  */
 export const parseBackgroundValue = (value: string): string => {

@@ -2,9 +2,9 @@
  * @Author: ShawnPhang
  * @Date: 2021-09-02 15:36:56
  * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-07-20 14:59:12
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
  */
 import { routes } from 'virtual:vite-vue3-docs'
 

@@ -2,9 +2,9 @@
  * @Author: ShawnPhang
  * @Date: 2021-09-02 15:36:56
  * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-01-03 12:24:00
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
  */
 const fs = require('fs')
 const glob = require('glob')

@@ -2,7 +2,7 @@
  * @Author: ShawnPhang
  * @Date: 2023-05-25 17:45:07
  * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-06-21 15:42:37
  */
 const { exec } = require('child_process')
@@ -160,7 +160,7 @@ inquirer
         } else {
           // 创建 packageJson
           packageJson.name = scope + name
-          packageJson.homepage = `https://fe-doc.palxp.com/#/${name}`
+          packageJson.homepage = `https://fe-doc.palxp.cn/#/${name}`
           fs.writeFileSync(path.resolve(`./packages/${name}/package.json`), JSON.stringify(packageJson, null, '\t'))
           // 创建 README 文件
           fs.writeFileSync(path.resolve(`./packages/${name}/README.md`), readme(name))

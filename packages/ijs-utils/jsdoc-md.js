@@ -4,7 +4,7 @@
  * @Description: 生成MD文件
  * @LastEditors: ShawnPhang
  * @LastEditTime: 2021-09-22 20:16:22
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
  */
 console.log('---- Start -----')
 const fs = require('fs-extra')

@@ -4,7 +4,7 @@
  * @Description: 前端组件库搭建
  * @LastEditors: ShawnPhang <https://m.palxp.cn>
  * @LastEditTime: 2023-10-08 00:42:16
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
 -->
 
 ## 前端军火库

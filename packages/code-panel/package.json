@@ -1,28 +1,28 @@
 {
-	"name": "@palxp/code-panel",
-	"version": "1.2.4",
-	"description": "TODO",
-	"author": "ShawnPhang <palxiao@vip.qq.com>",
-	"homepage": "https://fe-doc.palxp.com/#/code-panel",
-	"license": "ISC",
-	"main": "dist/index.js",
-	"module": "dist/index.es.js",
-	"types": "dist/index.d.ts",
-	"publishConfig": {
-		"access": "public"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/palxiao/front-end-arsenal.git"
-	},
-	"scripts": {
-		"test": "echo \"Error: run tests from root\" && exit 1"
-	},
-	"bugs": {
-		"url": "https://github.com/palxiao/front-end-arsenal/issues"
-	},
-	"dependencies": {
-		"@monaco-editor/loader": "^1.3.3",
-		"monaco-editor": "^0.38.0"
-	}
+  "name": "@palxp/code-panel",
+  "version": "1.2.4",
+  "description": "TODO",
+  "author": "ShawnPhang <palxiao@vip.qq.com>",
+  "homepage": "https://fe-doc.palxp.cn/#/code-panel",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palxiao/front-end-arsenal.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/palxiao/front-end-arsenal/issues"
+  },
+  "dependencies": {
+    "@monaco-editor/loader": "^1.3.3",
+    "monaco-editor": "^0.38.0"
+  }
 }

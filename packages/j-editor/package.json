@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "掘金MarkDown编辑器vue3封装",
   "author": "ShawnPhang <palxiao@vip.qq.com>",
-  "homepage": "https://fe-doc.palxp.com/#/j-editor",
+  "homepage": "https://fe-doc.palxp.cn/#/j-editor",
   "license": "ISC",
   "main": "index",
   "module": "dist/index.es.js",

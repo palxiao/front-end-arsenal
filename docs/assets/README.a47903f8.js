@@ -1,8 +1,8 @@
-var i=`<!--
+let i = `<!--
  * @Author: ShawnPhang
  * @Date: 2023-05-26 17:09:49
  * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-08-22 23:51:39
 -->
 
@@ -26,4 +26,5 @@ var i=`<!--
 <h2 id="api">API</h2>
 <p><a href="/#/docs">API Docs \u94FE\u63A5</a></p>
   <iframe src="/#/docs/color-picker/index?preview=true" frameborder="0"></iframe>
-`;export{i as default};
+`
+export { i as default }

@@ -4,7 +4,7 @@
  * @Description: 
  * @LastEditors: ShawnPhang
  * @LastEditTime: 2021-09-26 14:43:34
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
 -->
 <template>
   <div id="Home">

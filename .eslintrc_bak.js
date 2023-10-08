@@ -4,18 +4,15 @@
  * @Description: ESlint 后面修改
  * @LastEditors: ShawnPhang
  * @LastEditTime: 2021-09-03 10:03:20
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
  */
 module.exports = {
   env: {
-    'browser': true,
-    'es2021': true,
-    'node': true
+    browser: true,
+    es2021: true,
+    node: true,
   },
-  extends: [
-    'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended'
-  ],
+  extends: ['plugin:vue/vue3-recommended', 'plugin:@typescript-eslint/recommended'],
   parser: 'vue-eslint-parser',
   parserOptions: {
     parser: '@typescript-eslint/parser',
@@ -23,8 +20,8 @@ module.exports = {
     sourceType: 'module',
     ecmaFeatures: {
       tsx: true,
-      jsx: true
-    }
+      jsx: true,
+    },
   },
   rules: {
     // 'camelcase': 2,
@@ -48,5 +45,5 @@ module.exports = {
     // '@typescript-eslint/explicit-module-boundary-types': 'off',
     // '@typescript-eslint/no-var-requires': 'off',
     // '@typescript-eslint/ban-ts-comment': 'off'
-  }
-};
+  },
+}

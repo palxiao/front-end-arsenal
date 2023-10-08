@@ -1,10 +1,12 @@
-import{_ as a,d as p,r as e,o as l,h as t,p as r}from"./index.c2734ee4.js";import{R as c}from"./ReadmeFrame.e7b50fa9.js";var o=`<!--
+import { _ as a, d as p, r as e, o as l, h as t, p as r } from './index.c2734ee4.js'
+import { R as c } from './ReadmeFrame.e7b50fa9.js'
+let o = `<!--
  * @Author: ShawnPhang
  * @Date: 2021-09-02 10:44:23
  * @Description: \u524D\u7AEF\u7EC4\u4EF6\u5E93\u642D\u5EFA
  * @LastEditors: ShawnPhang <https://m.palxp.cn>
  * @LastEditTime: 2023-10-08 00:42:16
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
 -->
 
 <h2 id="\u524D\u7AEF\u519B\u706B\u5E93">\u524D\u7AEF\u519B\u706B\u5E93</h2>
@@ -146,4 +148,18 @@ module.exports = {
 </code></pre>
 <h2 id="\u5907\u6CE8">\u5907\u6CE8</h2>
 <p>\u9879\u76EE\u542F\u52A8\u65F6 Node \u73AF\u5883\uFF1A14.17.0 \u5F53\u524D\u4F7F\u7528 Node \u7248\u672C\uFF1Av16.18.1</p>
-`;const i=p({name:"Home",components:{ReadmeFrame:c},setup(){return{readme:o}}}),h={id:"Home"};function d(s,m,u,j,g,b){const n=e("readme-frame");return l(),t("div",h,[r(n,{readme:s.readme},null,8,["readme"])])}var y=a(i,[["render",d]]);export{y as default};
+`
+const i = p({
+  name: 'Home',
+  components: { ReadmeFrame: c },
+  setup() {
+    return { readme: o }
+  },
+})
+const h = { id: 'Home' }
+function d(s, m, u, j, g, b) {
+  const n = e('readme-frame')
+  return l(), t('div', h, [r(n, { readme: s.readme }, null, 8, ['readme'])])
+}
+let y = a(i, [['render', d]])
+export { y as default }

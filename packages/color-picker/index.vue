@@ -2,7 +2,7 @@
  * @Author: ShawnPhang
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-08-22 23:46:41
 -->
 <template>

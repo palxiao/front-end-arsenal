@@ -2,7 +2,7 @@
  * @Author: ShawnPhang
  * @Date: 2023-05-29 16:14:47
  * @Description: 
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-05-29 17:44:25
 -->
 <template>

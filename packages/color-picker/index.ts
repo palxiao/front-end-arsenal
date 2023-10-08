@@ -2,7 +2,7 @@
  * @Author: ShawnPhang
  * @Date: 2023-05-29 14:24:41
  * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-05-29 14:25:05
  */
 import { App } from 'vue'

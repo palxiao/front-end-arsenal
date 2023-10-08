@@ -3,7 +3,7 @@
   "version": "1.3.1",
   "description": "TODO",
   "author": "ShawnPhang <palxiao@vip.qq.com>",
-  "homepage": "https://fe-doc.palxp.com/#/color-picker",
+  "homepage": "https://fe-doc.palxp.cn/#/color-picker",
   "license": "ISC",
   "main": "dist/index.js",
   "module": "dist/index.js",

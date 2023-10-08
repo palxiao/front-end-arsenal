@@ -4,7 +4,7 @@
  * @Description:
  * @LastEditors: ShawnPhang
  * @LastEditTime: 2021-09-25 18:36:24
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
  */
 /**
  * @desc   函数节流。

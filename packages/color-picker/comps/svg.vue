@@ -2,7 +2,7 @@
  * @Author: ShawnPhang
  * @Date: 2023-05-29 15:41:22
  * @Description: 吸管 SVG
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-05-29 15:48:17
 -->
 <template>

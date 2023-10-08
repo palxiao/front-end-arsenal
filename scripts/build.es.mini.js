@@ -2,9 +2,9 @@
  * @Author: ShawnPhang
  * @Date: 2021-09-02 15:36:56
  * @Description: 待优化
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-06-21 15:10:17
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
  */
 const fs = require('fs')
 const chalk = require('chalk')

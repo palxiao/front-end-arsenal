@@ -1,8 +1,8 @@
-var s=`<pre><code class="language-vue"><span class="hljs-comment">&lt;!--
+let s = `<pre><code class="language-vue"><span class="hljs-comment">&lt;!--
  * @Author: ShawnPhang
  * @Date: 2023-01-03 12:12:20
  * @Description: 
- * @LastEditors: ShawnPhang &lt;site: book.palxp.com&gt;
+ * @LastEditors: ShawnPhang &lt;site: m.palxp.cn&gt;
  * @LastEditTime: 2023-05-25 18:14:45
 --&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">template</span>&gt;</span>
@@ -34,4 +34,5 @@ var s=`<pre><code class="language-vue"><span class="hljs-comment">&lt;!--
 }
 </span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
 </code></pre>
-`;export{s as default};
+`
+export { s as default }

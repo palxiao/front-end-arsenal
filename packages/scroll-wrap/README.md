@@ -2,7 +2,7 @@
  * @Author: ShawnPhang
  * @Date: 2023-01-03 16:56:44
  * @Description:
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-05-29 17:41:20
 -->
 <img style="display: inline-block;" src="https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social" />

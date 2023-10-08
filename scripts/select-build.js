@@ -2,9 +2,9 @@
  * @Author: ShawnPhang
  * @Date: 2021-09-22 19:39:50
  * @Description: 打包选择器
- * @LastEditors: ShawnPhang <site: book.palxp.com>
+ * @LastEditors: ShawnPhang <site: m.palxp.cn>
  * @LastEditTime: 2023-07-20 16:38:04
- * @site: book.palxp.com / blog.palxp.com
+ * @site: m.palxp.cn / blog.palxp.com
  */
 const fs = require('fs')
 const ora = require('ora')
