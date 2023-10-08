@@ -3,13 +3,14 @@
  * @Date: 2023-10-07 23:50:21
  * @Description:
  * @LastEditors: ShawnPhang <https://m.palxp.cn>
- * @LastEditTime: 2023-10-08 15:50:03
+ * @LastEditTime: 2023-10-08 23:28:28
  */
 import { App } from 'vue'
-import Comp from './ImageExtraction.vue'
+import matting from './ImageExtraction.vue'
+import type Matting from './types/matting.d.ts'
 
-Comp.install = (app: App): void => {
-  app.component(Comp.name, Comp)
+matting.install = (app: App): void => {
+  app.component(matting.name, matting)
 }
 
-export default Comp
+export { matting, Matting }
