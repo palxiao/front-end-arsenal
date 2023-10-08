@@ -1,4 +1,4 @@
-export interface Matting {
+export interface MattingType {
   value: {}
   /** 是否为擦除画笔 */
   isErasing: boolean
