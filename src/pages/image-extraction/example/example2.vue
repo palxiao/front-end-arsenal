@@ -1,11 +1,11 @@
 <template>
   <button @click="open">打开</button>
   <button @click="close">关闭</button>
-  <Matting v-if="show" @register="mattingStart" />
+  <Matting v-if="show" :hasHeader="false" @register="mattingStart" />
 </template>
 
 <script lang="ts">
-import Matting from '@pkg/image-extraction/index.vue'
+import Matting from '@pkg/image-extraction/index'
 import MattingType from '@pkg/image-extraction/types/Matting'
 import { defineComponent, ref } from 'vue'
 export default defineComponent({

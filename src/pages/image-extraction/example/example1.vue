@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts">
-import comp from '@pkg/image-extraction/index.vue'
+import comp from '@pkg/image-extraction/index'
 import { defineComponent } from 'vue'
 export default defineComponent({
   components: { comp },

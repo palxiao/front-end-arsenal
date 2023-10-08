@@ -1,5 +1,5 @@
 <template>
-  <div class="options-container">
+  <div v-if="hasHeader" class="options-container">
     <slot>
       <div class="default-wrap">
         <div class="option">
@@ -49,6 +49,13 @@ import { ref, onMounted, Ref, computed, nextTick, watch, defineExpose, onUnmount
 import { generateResultImageURL, getLoadedImage } from './helpers/dom-helper'
 
 export default defineComponent({
+  props: {
+    // 组件内是否存在头部工具栏
+    hasHeader: {
+      type: Boolean,
+      default: true,
+    },
+  },
   emits: ['register'],
   setup(props, { emit }) {
     const inputCvs: Ref<null | HTMLCanvasElement> = ref(null)
