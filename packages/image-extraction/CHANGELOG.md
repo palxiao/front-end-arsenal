@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/palxiao/front-end-arsenal/compare/@palxp/image-extraction@1.1.1...@palxp/image-extraction@1.2.0) (2023-10-08)
+
+
+### Features
+
+* **component:** 增加隐藏头部 ([406f1c5](https://github.com/palxiao/front-end-arsenal/commit/406f1c5ea0e38489e91a6b36982b773e5aad42d6))
+
+
+
+
+
 ## [1.1.1](https://github.com/palxiao/front-end-arsenal/compare/@palxp/image-extraction@1.1.0...@palxp/image-extraction@1.1.1) (2023-10-08)
 
 **Note:** Version bump only for package @palxp/image-extraction
