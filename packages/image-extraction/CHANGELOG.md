@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.3](https://github.com/palxiao/front-end-arsenal/compare/@palxp/image-extraction@1.2.2...@palxp/image-extraction@1.2.3) (2023-10-08)
+
+
+### Bug Fixes
+
+* **component:** Matting类型导出 ([21aa8ad](https://github.com/palxiao/front-end-arsenal/commit/21aa8ad75021056913c0e2cc548c15a073d79e5b))
+
+
+
+
+
 ## [1.2.2](https://github.com/palxiao/front-end-arsenal/compare/@palxp/image-extraction@1.2.1...@palxp/image-extraction@1.2.2) (2023-10-08)
 
 **Note:** Version bump only for package @palxp/image-extraction
