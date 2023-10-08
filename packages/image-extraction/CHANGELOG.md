@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/palxiao/front-end-arsenal/compare/@palxp/image-extraction@1.2.1...@palxp/image-extraction@1.2.2) (2023-10-08)
+
+**Note:** Version bump only for package @palxp/image-extraction
+
+
+
+
+
 ## [1.2.1](https://github.com/palxiao/front-end-arsenal/compare/@palxp/image-extraction@1.2.0...@palxp/image-extraction@1.2.1) (2023-10-08)
 
 **Note:** Version bump only for package @palxp/image-extraction
