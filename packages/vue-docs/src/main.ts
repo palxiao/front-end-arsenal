@@ -54,7 +54,7 @@ export function handleScript(script: SFCScriptBlock, setup = false): Component {
     const match: any = script.content.match(regex)
     scriptContent = `export default {
       name: 'DefaultComponent',
-      props: {${match[2]}}
+      props: {${match ? match[2] : ''}}
     }`
   }
 

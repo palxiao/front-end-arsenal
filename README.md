@@ -2,8 +2,8 @@
  * @Author: ShawnPhang
  * @Date: 2021-09-02 10:44:23
  * @Description: 前端组件库搭建
- * @LastEditors: ShawnPhang <site: book.palxp.com>
- * @LastEditTime: 2023-07-20 16:37:14
+ * @LastEditors: ShawnPhang <https://m.palxp.cn>
+ * @LastEditTime: 2023-10-08 00:42:16
  * @site: book.palxp.com / blog.palxp.com
 -->
 
@@ -12,6 +12,8 @@
 <!-- START -->
 
 #### [ColorPicker 颜色选择器（吸色器）](/#/color-picker)
+
+#### [ImageExtraction 图像修补擦除工具](/#/image-extraction)
 
 #### [ScrollWrap 吸附滚动组件](/#/scroll-wrap)
 
