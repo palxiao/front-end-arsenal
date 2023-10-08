@@ -1,1 +1,0 @@
-import{C as e}from"./index.e5d6c856.js";import{_ as n,d as t,r as p,o as r,c}from"./index.c2734ee4.js";const s=t({components:{comp:e},setup(){return{}}});function a(m,_,f,d,i,u){const o=p("comp");return r(),c(o)}var C=n(s,[["render",a]]);export{C as default};

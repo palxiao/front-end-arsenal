@@ -5,8 +5,8 @@
 </template>
 
 <script lang="ts">
-import { matting } from '@pkg/image-extraction/index'
-import MattingType from '@pkg/image-extraction/types/Matting'
+import matting from '@pkg/image-extraction/index'
+import { MattingType } from '@pkg/image-extraction/index'
 import { defineComponent, ref } from 'vue'
 export default defineComponent({
   components: { matting },
