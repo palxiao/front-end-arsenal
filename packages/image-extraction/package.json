@@ -5,9 +5,9 @@
   "author": "ShawnPhang <palxiao@vip.qq.com>",
   "homepage": "https://fe-doc.palxp.com/#/image-extraction",
   "license": "ISC",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "types/matting.d.ts",
   "publishConfig": {
     "access": "public"
   },
