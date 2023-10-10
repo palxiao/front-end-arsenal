@@ -2,8 +2,8 @@
  * @Author: ShawnPhang
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
- * @LastEditors: ShawnPhang <site: m.palxp.cn>
- * @LastEditTime: 2023-08-22 23:46:41
+ * @LastEditors: ShawnPhang <https://m.palxp.cn>
+ * @LastEditTime: 2023-10-11 00:39:40
 -->
 <template>
   <div class="color-picker">
@@ -506,7 +506,7 @@ function patchHexColor(str) {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .flex-center {
   display: flex;
   justify-content: center;

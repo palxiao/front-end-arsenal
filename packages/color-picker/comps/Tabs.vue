@@ -75,7 +75,7 @@ function onClickTab(tab, index) {
 defineExpose({ tabs })
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .my-tabs__header {
   margin-bottom: 0.75rem;
   border-radius: 0.25rem;
@@ -98,10 +98,9 @@ defineExpose({ tabs })
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   z-index: 1;
-
-  &.my-active {
-    font-weight: bold;
-  }
+}
+.my-tab__title.my-active {
+  font-weight: bold;
 }
 
 .my-tab__slider {
