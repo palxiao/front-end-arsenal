@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.3.3...@palxp/color-picker@1.4.0) (2023-11-28)
+
+
+### Features
+
+* **component:** add gradient colorPicker ([e0cbdd2](https://github.com/palxiao/front-end-arsenal/commit/e0cbdd20d9dad2ebc0de64e66958058bc4bf0cd6))
+
+
+
+
+
 ## [1.3.3](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.3.2...@palxp/color-picker@1.3.3) (2023-10-10)
 
 **Note:** Version bump only for package @palxp/color-picker
