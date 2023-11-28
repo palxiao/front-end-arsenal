@@ -2,8 +2,8 @@
  * @Author: ShawnPhang
  * @Date: 2023-04-26 11:30:10
  * @Description:
- * @LastEditors: ShawnPhang <site: m.palxp.cn>
- * @LastEditTime: 2023-05-27 17:24:41
+ * @LastEditors: ShawnPhang <https://m.palxp.cn>
+ * @LastEditTime: 2023-11-28 11:03:14
  */
 export const parseBackgroundValue = (value: string): string => {
   if (value.startsWith('#')) return '纯色'

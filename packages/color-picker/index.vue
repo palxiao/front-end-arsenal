@@ -3,20 +3,19 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <https://m.palxp.cn>
- * @LastEditTime: 2023-10-11 00:39:40
+ * @LastEditTime: 2023-11-28 17:01:49
 -->
 <template>
   <div class="color-picker">
-    <div class="title">{{ mode }}</div>
-
     <Tabs v-if="modes.length > 1" :value="mode" @update:value="onChangeMode">
       <TabPanel v-for="label in modes" :key="label" :label="label"> </TabPanel>
     </Tabs>
+    <div v-else class="title">{{ mode }}</div>
 
     <template v-if="showGradient">
       <div v-show="mode === '渐变'" class="cp__gradient flex-center">
-        <div class="cp__gradient-bar w-48" style="height: 16px">
-          <div ref="elGradientTrack" class="cpgb__track h-full" style="width: 100%" :style="{ background: value }">
+        <div class="cp__gradient-bar">
+          <div ref="elGradientTrack" class="cpgb__track" style="width: 100%" :style="{ background: value }">
             <!-- tabindex="-1" 是元素可以触发 keydown 事件 -->
             <div
               v-for="(gradient, index) in gradients"
@@ -37,6 +36,9 @@
               @keyup.stop="onKeyupGradientPointer"
             ></div>
           </div>
+        </div>
+        <div class="angle-input-box">
+          <input v-model="angle" class="angle-input" @input="angleChange" @blur="setColor(activeGradient.color)" />
         </div>
       </div>
     </template>
@@ -66,9 +68,12 @@
         <input v-else class="native" type="color" @input="onClickStraw" />
       </div>
       <!-- <input :value="value" @input="$emit('update:value', $event.target.value)" class="input" /> -->
-      <input :value="value" class="input" @blur="onInputBlur" />
-      <div v-for="pc in predefine" :key="pc" class="item" :style="{ background: pc }" @click="onClickStraw({ target: { value: pc } })"></div>
-      <!-- <InputNumber v-model:value="alpha" class="w-12" size="small" :min="0" :max="100" @input="onChangeAlpha" @change="onChangeAlpha" /> -->
+      <input v-if="mode === '渐变'" class="input" :value="activeGradient.color" />
+      <input v-else :value="value" class="input" @blur="onInputBlur" />
+      <template v-if="mode === '纯色'">
+        <div v-for="pc in predefine" :key="pc" class="item item-color" :style="{ background: pc }" @click="onClickStraw({ target: { value: pc } })"></div>
+      </template>
+      <!-- <input :value="alpha" class="w-12" size="small" :min="0" :max="100" @input="onChangeAlpha" @change="onChangeAlpha" /> -->
     </div>
   </div>
 </template>
@@ -118,7 +123,7 @@ const props = defineProps({
   },
 })
 
-const emit = defineEmits(['update:value', 'native-pick', 'blur'])
+const emit = defineEmits(['update:value', 'change', 'native-pick', 'blur'])
 
 const mode = ref(parseBackgroundValue(props.value)) // 颜色、渐变、图片
 const angle = ref(90)
@@ -348,6 +353,13 @@ function updateValue(value) {
 
   recordValue(value)
   emit('update:value', value)
+
+  emit('change', {
+    mode: mode.value,
+    color: value,
+    angle: Number(angle.value),
+    stops: gradients.value,
+  })
 }
 
 async function onChangeMode(value) {
@@ -380,7 +392,6 @@ function changeMode(mode) {
         if (!color.startsWith('#')) color = RGBA2HexA(color)
 
         offset = offset.match(/\d+/)[0] / 100
-
         gradients.value.push({ color, offset })
         activeGradient.value = gradients.value[0]
       })
@@ -486,12 +497,19 @@ async function onClickStraw(val) {
       console.log('用户取消了取色')
     }
   }
-  emit('update:value', result)
+  if (mode.value === '渐变') {
+    activeGradient.value.color = result
+    activeGradient.value = { ...activeGradient.value }
+  } else {
+    emit('update:value', result)
+  }
   emit('native-pick', result)
 }
 
 const onInputBlur = (e) => {
-  emit('blur', patchHexColor(e.target.value))
+  const fixColor = patchHexColor(e.target.value)
+  emit('blur', fixColor)
+  emit('update:value', fixColor)
 }
 
 function patchHexColor(str) {
@@ -503,6 +521,10 @@ function patchHexColor(str) {
     hex = hex.padEnd(9, 'f')
   }
   return hex
+}
+
+function angleChange() {
+  updateValue(toGradientString(angle.value, gradients.value))
 }
 </script>
 
@@ -527,15 +549,19 @@ function patchHexColor(str) {
   &-bar {
     display: flex;
     justify-content: center;
-    padding: 0 10px;
+    height: 16px;
+    width: 100%;
+    padding: 0 8px;
   }
 }
 
 .cpgb__track {
   position: relative;
+  cursor: pointer;
 }
 
 .cpgb__pointer {
+  cursor: grab;
   position: absolute;
   top: -0px;
   top: -0.125rem;
@@ -555,6 +581,7 @@ function patchHexColor(str) {
 
   &--active {
     z-index: 1;
+    border-radius: 3px;
     box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%), 0 0 0 1.2px #2254f4;
   }
 }
@@ -647,7 +674,9 @@ function patchHexColor(str) {
     height: 24px;
     box-sizing: border-box;
     border-radius: 4px;
-    // box-shadow: inset 0 0 0 1px rgb(0 0 0 / 6%);
+  }
+  .item-color {
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 6%);
   }
   .item:first-of-type {
     margin: 0;
@@ -656,8 +685,8 @@ function patchHexColor(str) {
     transform: scale(1.08);
   }
   .input {
-    width: 4rem;
-    margin-left: 10px;
+    width: 4.7rem;
+    margin-left: 2px;
   }
   .native {
     width: 100%;
@@ -673,6 +702,7 @@ function patchHexColor(str) {
 }
 
 .cpst__pointer {
+  cursor: pointer;
   box-shadow: 0 0 2px rgb(0 0 0 / 60%);
   position: absolute;
   top: 0px;
@@ -686,5 +716,23 @@ function patchHexColor(str) {
   border-width: 4px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.angle-input {
+  width: 38px;
+  margin-left: 5px;
+  padding: 0 0 0 4px;
+  border: 1px solid #e8eaec;
+  border-radius: 4px;
+  position: relative;
+}
+.angle-input-box {
+  position: relative;
+}
+.angle-input-box::after {
+  content: '°';
+  position: absolute;
+  right: 2px;
+  top: -3px;
 }
 </style>

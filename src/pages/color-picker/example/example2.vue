@@ -1,6 +1,10 @@
 <template>
   <div style="width: 220px">
-    <color-picker v-model:value="innerColor" @native-pick="colorChange" />
+    <color-picker v-model:value="innerColor" @change="colorChange" />
+    <br />
+    颜色结果：
+    {{ innerColor }}
+    <div :style="{ background: innerColor }" class="testBox"></div>
   </div>
 </template>
 
@@ -12,8 +16,8 @@ export default defineComponent({
   setup() {
     const innerColor = ref('#ffffffff')
 
-    const colorChange = (c) => {
-      console.log('来自吸取颜色：' + c)
+    const colorChange = (v) => {
+      console.log(v)
     }
 
     return {
@@ -23,3 +27,10 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.testBox {
+  width: 200px;
+  height: 200px;
+}
+</style>
