@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.4.0...@palxp/color-picker@1.5.0) (2023-11-29)
+
+
+### Features
+
+* **component:** add a angle handle ([635a62c](https://github.com/palxiao/front-end-arsenal/commit/635a62c379ae05d079cda7a9da0cf74ec0a81822))
+
+
+
+
+
 # [1.4.0](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.3.3...@palxp/color-picker@1.4.0) (2023-11-28)
 
 
