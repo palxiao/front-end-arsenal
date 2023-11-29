@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <https://m.palxp.cn>
- * @LastEditTime: 2023-11-28 17:01:49
+ * @LastEditTime: 2023-11-29 17:40:12
 -->
 <template>
   <div class="color-picker">
@@ -37,9 +37,7 @@
             ></div>
           </div>
         </div>
-        <div class="angle-input-box">
-          <input v-model="angle" class="angle-input" @input="angleChange" @blur="setColor(activeGradient.color)" />
-        </div>
+        <AngleHandleVue v-model="angle" @change="angleChange" />
       </div>
     </template>
 
@@ -95,6 +93,7 @@ import Tabs from './comps/Tabs.vue'
 import xiguan from './comps/svg.vue'
 import TabPanel from './comps/TabPanel.vue'
 import { debounce } from 'throttle-debounce'
+import AngleHandleVue from './comps/AngleHandle.vue'
 
 const props = defineProps({
   value: {
@@ -716,23 +715,5 @@ function angleChange() {
   border-width: 4px;
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
-.angle-input {
-  width: 38px;
-  margin-left: 5px;
-  padding: 0 0 0 4px;
-  border: 1px solid #e8eaec;
-  border-radius: 4px;
-  position: relative;
-}
-.angle-input-box {
-  position: relative;
-}
-.angle-input-box::after {
-  content: '°';
-  position: absolute;
-  right: 2px;
-  top: -3px;
 }
 </style>
