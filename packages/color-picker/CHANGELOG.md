@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.5.0...@palxp/color-picker@1.5.1) (2023-11-30)
+
+
+### Bug Fixes
+
+* **component:** colorPicker gradient delete ([34b5d8b](https://github.com/palxiao/front-end-arsenal/commit/34b5d8b933a8e927802ba546528fdd1072d7de9b))
+
+
+
+
+
 # [1.5.0](https://github.com/palxiao/front-end-arsenal/compare/@palxp/color-picker@1.4.0...@palxp/color-picker@1.5.0) (2023-11-29)
 
 
