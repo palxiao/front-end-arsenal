@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <https://m.palxp.cn>
- * @LastEditTime: 2023-11-29 17:40:12
+ * @LastEditTime: 2023-11-30 09:55:29
 -->
 <template>
   <div class="color-picker">
@@ -33,7 +33,7 @@
               }"
               tabindex="-1"
               @mousedown="onMousedownGradientPointer(gradient)"
-              @keyup.stop="onKeyupGradientPointer"
+              @keydown.stop="onKeyupGradientPointer"
             ></div>
           </div>
         </div>
