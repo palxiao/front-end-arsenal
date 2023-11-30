@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <https://m.palxp.cn>
- * @LastEditTime: 2023-11-30 09:55:29
+ * @LastEditTime: 2023-11-30 10:02:37
 -->
 <template>
   <div class="color-picker">
@@ -440,6 +440,8 @@ function onMousedownGradientPointer(stop) {
 }
 
 function onKeyupGradientPointer(event) {
+  event.stopPropagation()
+  event.preventDefault()
   if (!['Backspace', 'Delete'].includes(event.key)) return
   if (gradients.value.length === 2) return
 
