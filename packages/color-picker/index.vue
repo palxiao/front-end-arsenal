@@ -3,7 +3,7 @@
  * @Date: 2023-05-26 17:42:26
  * @Description: 调色板
  * @LastEditors: ShawnPhang <https://m.palxp.cn>
- * @LastEditTime: 2023-11-30 10:02:37
+ * @LastEditTime: 2024-01-31 10:44:41
 -->
 <template>
   <div class="color-picker">
@@ -530,6 +530,14 @@ function angleChange() {
 </script>
 
 <style lang="less" scoped>
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
 .flex-center {
   display: flex;
   justify-content: center;
