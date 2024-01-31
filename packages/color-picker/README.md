@@ -1,11 +1,10 @@
 <!--
  * @Author: ShawnPhang
- * @Date: 2023-05-26 17:09:49
+ * @Date: 2023-05-29 22:54:18
  * @Description:
- * @LastEditors: ShawnPhang <site: m.palxp.cn>
- * @LastEditTime: 2023-08-22 23:51:39
+ * @LastEditors: ShawnPhang <https://m.palxp.cn>
+ * @LastEditTime: 2024-01-31 10:51:35
 -->
-
 <img style="display: inline-block;" src="https://img.shields.io/github/watchers/palxiao/front-end-arsenal?style=social" />
 <img style="display: inline-block;" src="https://img.shields.io/github/forks/palxiao/front-end-arsenal?style=social" />
 <img style="display: inline-block;" src="https://img.shields.io/github/stars/palxiao/front-end-arsenal?style=social" />
