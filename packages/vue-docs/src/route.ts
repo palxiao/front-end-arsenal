@@ -141,7 +141,7 @@ class DocsRoute {
     const cacheDir = Cache.childFile(this.config, route)
 
     // TODO: 把数据写出来
-    const jsonDir = path.join(this.config.cacheDir, route.name + '.json')
+    const jsonDir = path.resolve(this.config.cacheDir, route.name + '.json')
     fs.writeFileSync(jsonDir, JSON.stringify(result))
 
     route.component = `() => import('${cacheDir}')`

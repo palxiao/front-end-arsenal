@@ -47,7 +47,7 @@ export default function vueDocs(rawOptions?: CustomConfig): Plugin {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
   const userPkg = require(`${process.cwd()}/package.json`)
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const pkg = require(`${path.join(__dirname, '../package.json')}`)
+  const pkg = require(`${path.resolve(__dirname, '../package.json')}`)
   const userProjectDir = process.cwd()
 
   const config: Config = {
@@ -58,7 +58,7 @@ export default function vueDocs(rawOptions?: CustomConfig): Plugin {
     fileExp: RegExp(''),
     showUse: true,
     userProjectDir: userProjectDir,
-    cacheDir: path.join(userProjectDir, '.cache-vue-docs'),
+    cacheDir: path.resolve(userProjectDir, '.cache-vue-docs'),
     header: {
       title: userPkg.name,
     },

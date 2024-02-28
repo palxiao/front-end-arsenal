@@ -9,7 +9,7 @@ function createDir(config: Config): void {
 }
 
 function createLayout(config: Config, route: DocsRoute): void {
-  const layoutDir = path.join(__dirname, './template/layout.vue')
+  const layoutDir = path.resolve(__dirname, './template/layout.vue')
   const oldDir = config.cacheDir + '/layout.vue'
 
   let oldData = ''
@@ -34,10 +34,10 @@ function clean(config: Config): void {
 }
 
 function childFile(config: Config, route: Route): string {
-  const cacheDir = path.join(config.cacheDir, route.name + '.vue')
+  const cacheDir = path.resolve(config.cacheDir, route.name + '.vue')
   debug.cache('childFile %s', cacheDir)
 
-  const tmpContent = fs.readFileSync(path.join(__dirname, './template/content.vue'), 'utf-8')
+  const tmpContent = fs.readFileSync(path.resolve(__dirname, './template/content.vue'), 'utf-8')
 
   let oldContent = ''
   if (fs.existsSync(cacheDir)) {
